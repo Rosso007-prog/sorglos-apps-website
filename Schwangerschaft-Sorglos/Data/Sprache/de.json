@@ -1,0 +1,29 @@
+{
+  "app_title": "Schwangerschaft Sorglos",
+  "welcome": "Willkommen bei Schwangerschaft Sorglos!",
+  "select_language": "Sprache auswählen",
+  "week_1": {
+    "title": "Woche 1",
+    "description": "In der ersten Woche beginnt deine Reise! Dein Körper bereitet sich auf die Schwangerschaft vor."
+  },
+  "show_tips": "Tipps anzeigen",
+  "navigation": {
+    "home": "Start",
+    "weeks": "Wochen",
+    "tips": "Tipps",
+    "reminders": "Erinnerungen",
+    "settings": "Einstellungen"
+  },
+  "reminders": {
+    "title": "Erinnerungen",
+    "no_reminders": "Keine Erinnerungen vorhanden",
+    "add_title": "Erinnerung hinzufügen",
+    "title_label": "Titel",
+    "select_datetime": "Datum und Uhrzeit auswählen",
+    "cancel": "Abbrechen",
+    "save": "Speichern"
+  },
+  "reminder": {
+    "notification_body": "Nicht vergessen: Deine Erinnerung ist fällig!"
+  }
+}

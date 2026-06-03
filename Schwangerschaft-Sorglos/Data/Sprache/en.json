@@ -1,0 +1,54 @@
+{
+  "app_title": "Pregnancy Carefree",
+  "select_language": "Select Language",
+  "welcome": "Welcome to Pregnancy Carefree!",
+  "week_1": {
+    "title": "Week 1",
+    "description": "Your pregnancy begins with conception."
+  },
+  "week_2": {
+    "title": "week_2.title",
+    "description": "week_2.description"
+  },
+  "week_3": {
+    "title": "week_3.title",
+    "description": "week_3.description"
+  },
+
+  "week_40": {
+    "title": "week_40.title",
+    "description": "week_40.description"
+  },
+  "tips": {
+    "title": "Tips for Your Pregnancy",
+    "nutrition": {
+      "title": "Nutrition",
+      "description": "Ensure sufficient folic acid and iron."
+    },
+    "exercise": {
+      "title": "Exercise",
+      "description": "Light walks promote your well-being."
+    },
+    "rest": {
+      "title": "Rest",
+      "description": "Get plenty of sleep."
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "weeks": "navigation.weeks",
+    "tips": "Tips",
+    "settings": "Settings"
+  },
+  "show_tips": "Show Tips",
+  "settings": {
+    "title": "Settings",
+    "theme_section": "Theme",
+    "theme_default": "Default",
+    "theme_dark": "Dark",
+    "theme_pastel": "Pastel"
+  },
+  "weeks": {
+    "title": "weeks.title"
+  }
+}
