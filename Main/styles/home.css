@@ -588,18 +588,13 @@ h3 {
     margin-bottom: 1rem;
 }
 
-.app-icon-wrap {
-    position: relative;
-    flex-shrink: 0;
-    width: 3.2rem;
-}
-
 .app-icon {
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 0.8rem;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
 }
 
 .app-icon-placeholder {
@@ -608,24 +603,28 @@ h3 {
     border-radius: 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.app-card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .app-wip-badge {
-    position: absolute;
-    bottom: -0.45rem;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 0.18rem 0.45rem;
+    padding: 0.15rem 0.5rem;
     border-radius: 999px;
-    background: rgba(255, 199, 133, 0.15);
+    background: rgba(255, 199, 133, 0.12);
     color: var(--accent-3);
-    border: 1px solid rgba(255, 199, 133, 0.3);
-    pointer-events: none;
+    border: 1px solid rgba(255, 199, 133, 0.25);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .app-card-copy {
@@ -823,7 +822,7 @@ h3 {
         top: calc(100% + 0.5rem);
         right: 0.6rem;
         left: 0.6rem;
-        display: none;
+        display: flex;
         flex-direction: column;
         padding: 0.75rem;
         border-radius: 1.2rem;
@@ -831,10 +830,19 @@ h3 {
         border: 1px solid var(--border);
         box-shadow: var(--shadow);
         backdrop-filter: blur(20px);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
     }
 
     .site-nav.is-open {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+        transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 0s;
     }
 
     .site-nav a {

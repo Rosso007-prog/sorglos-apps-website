@@ -17,7 +17,7 @@
 
     if (!slug || !base) { showError("App nicht gefunden."); return; }
 
-    fetch(base + "?v=" + Date.now())
+    fetch(base, { cache: "no-store" })
         .then(r => r.json())
         .then(data => {
             const app = data.apps.find(a => a.slug === slug);

@@ -13,11 +13,33 @@ const accentMap = {
     Play: "rgba(255, 129, 150, 0.2)"
 };
 
+function closeMenu() {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+}
+
 if (toggle && nav) {
     toggle.addEventListener("click", () => {
         const isOpen = nav.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", String(isOpen));
     });
+
+    nav.querySelectorAll("a").forEach(link => {
+        // click + touchend für iOS
+        link.addEventListener("click", closeMenu);
+        link.addEventListener("touchend", closeMenu, { passive: true });
+    });
+
+    document.addEventListener("click", e => {
+        if (nav.classList.contains("is-open") && !nav.contains(e.target) && !toggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+    document.addEventListener("touchend", e => {
+        if (nav.classList.contains("is-open") && !nav.contains(e.target) && !toggle.contains(e.target)) {
+            closeMenu();
+        }
+    }, { passive: true });
 }
 
 const setMetrics = (apps) => {
@@ -33,10 +55,37 @@ const setMetrics = (apps) => {
     if (featuredMetric) featuredMetric.textContent = String(featured.length);
 };
 
+const shuffle = (arr) => arr
+    .map(a => ({ a, r: Math.random() }))
+    .sort((x, y) => x.r - y.r)
+    .map(x => x.a);
+
+const pickFeatured = (apps) => {
+    // One random app per category, then fill up with remaining featured
+    const featured = shuffle(apps.filter(a => a.featured));
+    const picked = [];
+    const usedCategories = new Set();
+    for (const app of featured) {
+        if (!usedCategories.has(app.category)) {
+            picked.push(app);
+            usedCategories.add(app.category);
+        }
+        if (picked.length === 4) break;
+    }
+    // Fill remaining slots if fewer than 4 categories
+    if (picked.length < 4) {
+        for (const app of featured) {
+            if (!picked.includes(app)) picked.push(app);
+            if (picked.length === 4) break;
+        }
+    }
+    return picked;
+};
+
 const renderFeatured = (apps) => {
     if (!spotlightRoot) return;
 
-    const featured = apps.filter((app) => app.featured).slice(0, 4);
+    const featured = pickFeatured(apps);
     spotlightRoot.innerHTML = featured.map((app) => {
         const linkHref = (app.href && !app.href.startsWith("http")) ? app.href : (app.appStoreUrl || "#");
         const target = app.appStoreUrl && app.href.startsWith("http") ? ' target="_blank" rel="noopener"' : "";
@@ -113,12 +162,12 @@ const createAppCard = (app) => {
     <article class="app-card">
         <div class="app-card-shell">
             <div class="app-card-top">
-                <div class="app-icon-wrap">
-                    ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
-                    ${!storeHref ? `<span class="app-wip-badge">In Entwicklung</span>` : ""}
-                </div>
+                ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
                 <div class="app-card-copy">
-                    <strong class="app-card-name">${app.name}</strong>
+                    <div class="app-card-name-row">
+                        <strong class="app-card-name">${app.name}</strong>
+                        ${!storeHref ? `<span class="app-wip-badge">In Entwicklung</span>` : ""}
+                    </div>
                     <span class="app-tagline">${app.tagline}</span>
                 </div>
             </div>
@@ -144,7 +193,7 @@ const renderApps = (apps, activeFilter = "Alle") => {
 
 const initPortfolio = async () => {
     try {
-        const response = await fetch("Main/content/apps.json?v=" + Date.now());
+        const response = await fetch("Main/content/apps.json", { cache: "no-store" });
         if (!response.ok) throw new Error("Portfolio konnte nicht geladen werden.");
 
         const data = await response.json();

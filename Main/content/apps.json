@@ -100,7 +100,15 @@
       "featured": false,
       "accent": "#7dafff",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/58/ad/2158ad04-e444-cad8-28d0-ddf3a38bedef/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-      "storeDescription": "Baudokumentation für Bauleiter, Handwerker, Architekten und Unternehmen.\n\nDokumentieren Sie Baustellen, Mängel, Abnahmen und Baufortschritte mit Fotos, Spracheingabe und professionellen PDF-Berichten – einfach, sicher und flexibel."
+      "storeDescription": "Baudokumentation für Bauleiter, Handwerker, Architekten und Unternehmen.\n\nDokumentieren Sie Baustellen, Mängel, Abnahmen und Baufortschritte mit Fotos, Spracheingabe und professionellen PDF-Berichten – einfach, sicher und flexibel.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ]
     },
     {
       "name": "AboSorglos",
@@ -476,7 +484,18 @@
       "featured": false,
       "accent": "#76c9ff",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/c8/90/63c8905a-846a-6693-3f7a-51e693cf37ea/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-      "storeDescription": "Teste deine Internetgeschwindigkeit mit SpeedCheck Pro.\n\nErfahre in wenigen Sekunden, wie schnell deine Verbindung wirklich ist. SpeedCheck Pro misst Download, Upload, Ping und analysiert zusätzlich die Qualität deiner Verbindung für Streaming, Gaming und Videoanrufe."
+      "storeDescription": "Teste deine Internetgeschwindigkeit mit SpeedCheck Pro.\n\nErfahre in wenigen Sekunden, wie schnell deine Verbindung wirklich ist. SpeedCheck Pro misst Download, Upload, Ping und analysiert zusätzlich die Qualität deiner Verbindung für Streaming, Gaming und Videoanrufe.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png",
+        "7.png",
+        "8.png",
+        "9.png"
+      ]
     },
     {
       "name": "FotoSafe-Sorglos",
@@ -544,7 +563,14 @@
       "featured": false,
       "accent": "#ffcb7d",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/fd/73/c8fd73f5-5efe-bc8b-10e1-8b6312ae56cd/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-      "storeDescription": "Eieruhr Pro – Perfekte Eier, jedes Mal\n\nNie wieder zu weich oder zu hart.\nEieruhr Pro berechnet die perfekte Kochzeit individuell – basierend auf Größe, Temperatur und gewünschtem Härtegrad."
+      "storeDescription": "Eieruhr Pro – Perfekte Eier, jedes Mal\n\nNie wieder zu weich oder zu hart.\nEieruhr Pro berechnet die perfekte Kochzeit individuell – basierend auf Größe, Temperatur und gewünschtem Härtegrad.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png"
+      ]
     },
     {
       "name": "My Grill Timer-Sorglos",
@@ -578,7 +604,17 @@
       "featured": false,
       "accent": "#ff9e6d",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/fd/50/0efd50a2-2629-2f73-d4ba-a290c7bff033/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-      "storeDescription": "Perfekt grillen – ganz ohne Stress.\nOb Steak, Würstchen, Fisch oder Gemüse: Grilltimer Pro sorgt für punktgenaue Ergebnisse. Smarte Erinnerungen und adaptive Timer machen dein BBQ jedes Mal gelingsicher."
+      "storeDescription": "Perfekt grillen – ganz ohne Stress.\nOb Steak, Würstchen, Fisch oder Gemüse: Grilltimer Pro sorgt für punktgenaue Ergebnisse. Smarte Erinnerungen und adaptive Timer machen dein BBQ jedes Mal gelingsicher.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png",
+        "7.png",
+        "8.png"
+      ]
     },
     {
       "name": "ColorMood",
@@ -746,7 +782,15 @@
       "featured": true,
       "accent": "#62dfff",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/f4/25/9ff4252f-8d60-b127-9d36-18ad4214a350/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-      "storeDescription": "NeuroByte – Wo Wissen auf Strategie trifft.\n\nStell dir vor: Ein neuronales Netzwerk wird von einer KI angegriffen – und nur du kannst es retten.\nBeantworte Quizfragen, sichere Knotenpunkte und setze PowerUps strategisch ein. Doch Vorsicht – die KI schlägt zurück."
+      "storeDescription": "NeuroByte – Wo Wissen auf Strategie trifft.\n\nStell dir vor: Ein neuronales Netzwerk wird von einer KI angegriffen – und nur du kannst es retten.\nBeantworte Quizfragen, sichere Knotenpunkte und setze PowerUps strategisch ein. Doch Vorsicht – die KI schlägt zurück.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ]
     },
     {
       "name": "growzilla",
