@@ -7,12 +7,32 @@
       "audience": "Teams & Prozesse",
       "tagline": "Mobile ERP-Workflows mit Sprache, Bluetooth und Struktur.",
       "description": "Für Unternehmen, die Prozesse nicht nur digitalisieren, sondern direkt im Alltag nutzbar machen wollen.",
-      "icon": "Anything2ERP/AppIcon150x150.png",
-      "href": "Anything2ERP/index.html",
+      "icon": "apps/Anything2ERP/AppIcon150x150.png",
+      "href": "apps/Anything2ERP/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/anything2erp/id6740336978",
-      "badges": ["ERP", "Bluetooth", "Sprache"],
+      "badges": [
+        "ERP",
+        "Bluetooth",
+        "Sprache"
+      ],
+      "features": [
+        {
+          "titel": "Sprachgestützte Eingaben",
+          "text": "Informationen schnell per Sprache erfassen und direkt in digitale Prozesse überführen."
+        },
+        {
+          "titel": "Bluetooth-Geräteanbindung",
+          "text": "Kommunikation mit externer Hardware wie Sensorik oder Mikrocontrollern."
+        },
+        {
+          "titel": "ERP-nahe Datenlogik",
+          "text": "Strukturierte Daten nutzbar machen und produktive Prozesse unterstützen."
+        }
+      ],
       "featured": true,
-      "accent": "#6ee7c8"
+      "accent": "#6ee7c8",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/36/5d/3e/365d3ea5-844c-31ba-4e6e-648265c45e16/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "ESP32 Bluetooth Controller – Steuere dein ESP32-Gerät einfach und effizient\n\nMit der ESP32 Bluetooth Controller App kannst du dein ESP32-Gerät auf völlig neue Weise steuern."
     },
     {
       "name": "Buchhaltung-Sorglos",
@@ -21,12 +41,32 @@
       "audience": "Selbstständige",
       "tagline": "Rechnungen, Angebote und Finanzen ohne Chaos.",
       "description": "Eine klare Finanz-App für kleine Unternehmen, Freelancer und alle, die Ordnung in ihren Zahlen brauchen.",
-      "icon": "Buchhaltung-Sorglos/AppIcon150x150.png",
-      "href": "Buchhaltung-Sorglos/index.html",
+      "icon": "apps/Buchhaltung-Sorglos/AppIcon150x150.png",
+      "href": "apps/Buchhaltung-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/buchhaltung-sorglos/id6737428527",
-      "badges": ["Finanzen", "Angebote", "PDF"],
+      "badges": [
+        "Finanzen",
+        "Angebote",
+        "PDF"
+      ],
+      "features": [
+        {
+          "titel": "Rechnungen erstellen",
+          "text": "Professionelle Rechnungen und Angebote schnell erstellt und als PDF exportiert."
+        },
+        {
+          "titel": "Finanzübersicht",
+          "text": "Einnahmen und Ausgaben im Blick behalten ohne komplizierte Buchhaltungssoftware."
+        },
+        {
+          "titel": "Offline nutzbar",
+          "text": "Alle Daten bleiben lokal auf dem Gerät – kein Cloud-Konto erforderlich."
+        }
+      ],
       "featured": true,
-      "accent": "#ffd166"
+      "accent": "#ffd166",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/00/c5/f6/00c5f63c-ade9-b722-20b9-aa589eef9f90/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Beschreibung:\nDie Buchhaltung-Sorglos-App bietet Selbstständigen, Freelancern und kleinen Unternehmen eine benutzerfreundliche und effiziente Lösung, um Buchhaltungsprozesse zu organisieren."
     },
     {
       "name": "Baudokumentation – Pro Doku",
@@ -35,12 +75,32 @@
       "audience": "Bauprojekte",
       "tagline": "Bautagebuch, Mängel und PDF-Reports direkt vor Ort.",
       "description": "Professionelle Baudokumentation für Bauleiter, Handwerker und Projektverantwortliche.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/baudokumentation-pro-doku/id6754005836",
+      "icon": "apps/Construction-Log/AppIcon150x150.png",
+      "href": "apps/Construction-Log/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/baudokumentation-pro-doku/id6754005836",
-      "badges": ["Baudoku", "PDF", "Mängel"],
+      "badges": [
+        "Baudoku",
+        "PDF",
+        "Mängel"
+      ],
+      "features": [
+        {
+          "titel": "Bautagebuch",
+          "text": "Täglich Fortschritt dokumentieren mit Fotos, Notizen und Zeitstempeln."
+        },
+        {
+          "titel": "Mängelerfassung",
+          "text": "Mängel direkt vor Ort erfassen, zuweisen und nachverfolgen."
+        },
+        {
+          "titel": "PDF-Export",
+          "text": "Professionelle Berichte auf Knopfdruck für Auftraggeber und Behörden."
+        }
+      ],
       "featured": false,
-      "accent": "#7dafff"
+      "accent": "#7dafff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/58/ad/2158ad04-e444-cad8-28d0-ddf3a38bedef/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Baudokumentation für Bauleiter, Handwerker, Architekten und Unternehmen.\n\nDokumentieren Sie Baustellen, Mängel, Abnahmen und Baufortschritte mit Fotos, Spracheingabe und professionellen PDF-Berichten – einfach, sicher und flexibel."
     },
     {
       "name": "AboSorglos",
@@ -49,12 +109,40 @@
       "audience": "Finanzen & Abo-Management",
       "tagline": "Alle Abos im Blick – Geld sparen ohne Aufwand.",
       "description": "Überblick über alle laufenden Abonnements, damit kein Abo unbemerkt Geld kostet.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/abosorglos/id6760611316",
+      "icon": "apps/AboSorglos/AppIcon150x150.png",
+      "href": "apps/AboSorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/abosorglos/id6760611316",
-      "badges": ["Abos", "Kosten", "Überblick"],
+      "badges": [
+        "Abos",
+        "Kosten",
+        "Überblick"
+      ],
+      "features": [
+        {
+          "titel": "Abo-Übersicht",
+          "text": "Alle laufenden Abonnements an einem Ort – monatlich und jährlich."
+        },
+        {
+          "titel": "Erinnerungen",
+          "text": "Rechtzeitig informiert bevor die nächste Zahlung fällig wird."
+        },
+        {
+          "titel": "Kostenanalyse",
+          "text": "Auf einen Blick sehen, wie viel die eigenen Abos wirklich kosten."
+        }
+      ],
       "featured": false,
-      "accent": "#a0c4ff"
+      "accent": "#a0c4ff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/f6/31/12f631e2-4996-6242-2ad2-d81385832cb8/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "„Alle deine Abos und ihre echten monatlichen Kosten in einem klaren Dashboard.“\nAboSorglos hilft dir, den Überblick über deine Abonnements zu behalten und deine monatlichen Ausgaben besser zu verstehen.",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ]
     },
     {
       "name": "PassSafe Sorglos",
@@ -63,12 +151,32 @@
       "audience": "Sicherheit & Passwörter",
       "tagline": "Passwörter sicher verwalten ohne Cloud-Zwang.",
       "description": "Lokaler Passwort-Manager für alle, die ihre Zugangsdaten sicher und griffbereit haben wollen.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/passsafe-sorglos/id6759046653",
+      "icon": "apps/PassSafe-Sorglos/AppIcon150x150.png",
+      "href": "apps/PassSafe-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/passsafe-sorglos/id6759046653",
-      "badges": ["Passwörter", "Sicherheit", "Lokal"],
+      "badges": [
+        "Passwörter",
+        "Sicherheit",
+        "Lokal"
+      ],
+      "features": [
+        {
+          "titel": "Lokal & privat",
+          "text": "Alle Passwörter bleiben auf dem Gerät – keine Cloud, kein Konto nötig."
+        },
+        {
+          "titel": "Sicher verschlüsselt",
+          "text": "Zugangsdaten werden verschlüsselt gespeichert und mit Biometrie geschützt."
+        },
+        {
+          "titel": "Schneller Zugriff",
+          "text": "Passwörter sortiert und auf einen Blick verfügbar, wann immer nötig."
+        }
+      ],
       "featured": false,
-      "accent": "#6ecfff"
+      "accent": "#6ecfff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/36/6f/95/366f9549-ea6c-1b6c-7e29-46f61181eebc/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "PassSafe Sorglos ist dein sicherer, lokaler Passwort-Manager – entwickelt für maximale Privatsphäre und volle Kontrolle über deine sensiblen Daten.\n\n100 % lokale Verschlüsselung\nAlle Passwörter werden ausschließlich auf deinem Gerät gespeichert. Keine Cloud. Kein Tracking. Kein Datensammeln."
     },
     {
       "name": "Sortly-Sorglos",
@@ -77,12 +185,32 @@
       "audience": "Inventar & Lager",
       "tagline": "Bestände, Materialien und Orte endlich übersichtlich.",
       "description": "Hilft dabei, Gegenstände, Lagerorte und kleine Inventarsysteme sauber strukturiert zu organisieren.",
-      "icon": "Sortly-Sorglos/AppIcon150x150.png",
-      "href": "Sortly-Sorglos/index.html",
+      "icon": "apps/Sortly-Sorglos/AppIcon150x150.png",
+      "href": "apps/Sortly-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/sortly-sorglos/id6738582535",
-      "badges": ["Inventar", "Ordnung", "Organisation"],
+      "badges": [
+        "Inventar",
+        "Ordnung",
+        "Organisation"
+      ],
+      "features": [
+        {
+          "titel": "Orte & Räume",
+          "text": "Lagerorte anlegen und Gegenstände präzise zuordnen."
+        },
+        {
+          "titel": "Fotos & Details",
+          "text": "Jedes Objekt mit Foto, Beschreibung und Menge dokumentieren."
+        },
+        {
+          "titel": "Entnahmeprotokoll",
+          "text": "Nachvollziehbar festhalten, was wann entnommen wurde."
+        }
+      ],
       "featured": false,
-      "accent": "#7dafff"
+      "accent": "#7dafff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/11/2e/ca112e8a-fd82-628e-8b9c-cd8569132cbe/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Sortly-Sorglos: Die intuitive Inventarverwaltung für die ganze Familie\n\nMit Sortly-Sorglos behältst du jederzeit den Überblick über deine Bestände und Lagerorte – einfach, sicher und kinderleicht!\nOrganisiere deine Vorräte, Werkzeuge oder Haushaltsgegenstände in wenigen Klicks und bringe Ordnung in…"
     },
     {
       "name": "Imad zipi",
@@ -91,12 +219,32 @@
       "audience": "Events & Planung",
       "tagline": "Dein smarter Event-Planer für jeden Anlass.",
       "description": "Veranstaltungen planen, Gäste verwalten und den Überblick behalten – alles in einer App.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/imad-zipi/id6753635794",
+      "icon": "apps/Imad-zipi/AppIcon150x150.png",
+      "href": "apps/Imad-zipi/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/imad-zipi/id6753635794",
-      "badges": ["Events", "Gäste", "Planung"],
+      "badges": [
+        "Events",
+        "Gäste",
+        "Planung"
+      ],
+      "features": [
+        {
+          "titel": "Event-Planung",
+          "text": "Veranstaltungen von der Idee bis zur Durchführung strukturiert planen."
+        },
+        {
+          "titel": "Gästeverwaltung",
+          "text": "Einladungen, Zusagen und Absagen im Blick behalten."
+        },
+        {
+          "titel": "Aufgaben & Checklisten",
+          "text": "Nichts vergessen: To-dos direkt dem Event zuordnen."
+        }
+      ],
       "featured": false,
-      "accent": "#b8d4ff"
+      "accent": "#b8d4ff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/98/64/be9864bf-725f-6eae-beda-0c3b7df6ea9b/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Imad Zipi hilft dir, deinen Tag klar und organisiert zu gestalten.\nPlane Termine, verwalte Projekte und behalte deine wichtigsten Aufgaben im Blick – alles an einem Ort.\n\nErstelle Events mit wenigen Fingertipps, passe sie flexibel an und synchronisiere sie später sicher über die Cloud."
     },
     {
       "name": "Sorglos-Wachsen",
@@ -105,12 +253,32 @@
       "audience": "Elternalltag",
       "tagline": "Entwicklung, Erinnerungen und Familienmomente in einer App.",
       "description": "Ein ruhiger digitaler Begleiter für Eltern, die Struktur möchten, ohne den Alltag zu überladen.",
-      "icon": "Sorglos-Wachsen/AppIcon150x150.png",
-      "href": "Sorglos-Wachsen/index.html",
+      "icon": "apps/Sorglos-Wachsen/AppIcon150x150.png",
+      "href": "apps/Sorglos-Wachsen/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/sorglos-wachsen/id6739536384",
-      "badges": ["Familie", "Entwicklung", "Erinnerungen"],
+      "badges": [
+        "Familie",
+        "Entwicklung",
+        "Erinnerungen"
+      ],
+      "features": [
+        {
+          "titel": "Meilensteine festhalten",
+          "text": "Entwicklungsschritte der Kinder dokumentieren und als Erinnerung bewahren."
+        },
+        {
+          "titel": "Impf- & Arzttermine",
+          "text": "Erinnerungen für Vorsorgeuntersuchungen und Impfungen nie verpassen."
+        },
+        {
+          "titel": "Fotomomente",
+          "text": "Besondere Momente direkt zur Entwicklung des Kindes speichern."
+        }
+      ],
       "featured": true,
-      "accent": "#9be36f"
+      "accent": "#9be36f",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/8c/47/0c8c470c-2fb6-42ab-dba6-17cdab9679e3/AppIcon-0-0-1x_U007ephone-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Sorglos wachsen – Die smarte Eltern-App für ein glückliches Aufwachsen \n\nBehalte alles im Blick: Von wichtigen Terminen bis hin zu den schönsten Momenten – Sorglos wachsen ist dein smarter Begleiter für die gesunde Entwicklung deiner Kinder."
     },
     {
       "name": "Schwangerschaft-Sorglos",
@@ -119,10 +287,28 @@
       "audience": "Begleitung",
       "tagline": "Woche für Woche Orientierung in einer besonderen Zeit.",
       "description": "Mit Wochenstruktur, Erinnerungen und einem ruhigen Ton für werdende Eltern.",
-      "icon": "Schwangerschaft-Sorglos/AppIcon150x150.png",
-      "href": "Schwangerschaft-Sorglos/index.html",
+      "icon": "apps/Schwangerschaft-Sorglos/AppIcon150x150.png",
+      "href": "apps/Schwangerschaft-Sorglos/index.html",
       "appStoreUrl": "",
-      "badges": ["Schwangerschaft", "Wocheninfos", "Erinnerungen"],
+      "badges": [
+        "Schwangerschaft",
+        "Wocheninfos",
+        "Erinnerungen"
+      ],
+      "features": [
+        {
+          "titel": "Wocheninformationen",
+          "text": "Was passiert diese Woche? Klare, beruhigende Infos zur Entwicklung."
+        },
+        {
+          "titel": "Termin-Erinnerungen",
+          "text": "Vorsorgeuntersuchungen und wichtige Termine immer im Blick."
+        },
+        {
+          "titel": "Ruhiger Ton",
+          "text": "Bewusst ohne Überinformation – ein begleitender, nicht überfordernder Stil."
+        }
+      ],
       "featured": false,
       "accent": "#ffb0a6"
     },
@@ -133,12 +319,32 @@
       "audience": "Tagesstruktur",
       "tagline": "Smarter Tagesplaner für Gewohnheiten und Routinen.",
       "description": "Hilft dabei, tägliche Routinen aufzubauen, zu pflegen und langfristig beizubehalten.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/routine-coach/id6749523878",
+      "icon": "apps/Routine-Coach/AppIcon150x150.png",
+      "href": "apps/Routine-Coach/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/routine-coach/id6749523878",
-      "badges": ["Routinen", "Gewohnheiten", "Planer"],
+      "badges": [
+        "Routinen",
+        "Gewohnheiten",
+        "Planer"
+      ],
+      "features": [
+        {
+          "titel": "Tagesroutinen",
+          "text": "Morgen- und Abendroutinen aufbauen und konsequent einhalten."
+        },
+        {
+          "titel": "Gewohnheits-Tracking",
+          "text": "Fortschritt sehen und Motivation durch Streaks aufbauen."
+        },
+        {
+          "titel": "Smarte Erinnerungen",
+          "text": "Zur richtigen Zeit daran erinnert werden, die Routine zu starten."
+        }
+      ],
       "featured": false,
-      "accent": "#b0e6c0"
+      "accent": "#b0e6c0",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/d2/e9/b8d2e9d8-bf41-25f1-e7fe-a3cf683b7706/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Routine Coach – Dein smarter Tagesplaner\nStrukturiere deinen Tag mit Klarheit, baue Gewohnheiten auf und bleib fokussiert.\n\nRoutine Coach ist dein intelligenter Begleiter für Tagesplanung, Habit-Tracking, Achtsamkeit und Produktivität."
     },
     {
       "name": "Leafy",
@@ -147,10 +353,28 @@
       "audience": "Pflanzenpflege",
       "tagline": "Pflegeroutinen für grüne Lieblingsstücke.",
       "description": "Für Menschen, die ihre Pflanzen entspannter und regelmäßiger begleiten möchten.",
-      "icon": "Leafy/AppIcon150x150.png",
-      "href": "Leafy/index.html",
+      "icon": "apps/Leafy/AppIcon150x150.png",
+      "href": "apps/Leafy/index.html",
       "appStoreUrl": "",
-      "badges": ["Pflanzen", "Routine", "Pflege"],
+      "badges": [
+        "Pflanzen",
+        "Routine",
+        "Pflege"
+      ],
+      "features": [
+        {
+          "titel": "Gießerinnerungen",
+          "text": "Nie wieder vergessen zu gießen – individuell für jede Pflanze einstellbar."
+        },
+        {
+          "titel": "Pflanzenprofil",
+          "text": "Jede Pflanze mit Name, Foto und Pflegehinweisen dokumentieren."
+        },
+        {
+          "titel": "Pflegkalender",
+          "text": "Übersicht über alle anstehenden Pflegeaufgaben auf einen Blick."
+        }
+      ],
       "featured": false,
       "accent": "#7ee081"
     },
@@ -161,12 +385,32 @@
       "audience": "Pflanzenpflege",
       "tagline": "Smarte Pflanzenpflege leicht gemacht.",
       "description": "Erinnerungen, Pflegetipps und Wachstumsbegleitung für alle Pflanzenliebhaber.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/growmie-sorglos/id6747469986",
+      "icon": "apps/Growmie-Sorglos/AppIcon150x150.png",
+      "href": "apps/Growmie-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/growmie-sorglos/id6747469986",
-      "badges": ["Pflanzen", "Pflege", "Erinnerungen"],
+      "badges": [
+        "Pflanzen",
+        "Pflege",
+        "Erinnerungen"
+      ],
+      "features": [
+        {
+          "titel": "Wachstumsbegleitung",
+          "text": "Fortschritt der Pflanzen dokumentieren und Wachstumsphasen verfolgen."
+        },
+        {
+          "titel": "Pflegetipps",
+          "text": "Passende Tipps für jede Pflanze – Gießen, Düngen, Licht und mehr."
+        },
+        {
+          "titel": "Erinnerungen",
+          "text": "Smarte Erinnerungen für alle wichtigen Pflegezeitpunkte."
+        }
+      ],
       "featured": false,
-      "accent": "#a0e878"
+      "accent": "#a0e878",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/fd/18/5dfd183e-0442-b9d4-33af-4c3c53306f37/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "GrowMie – Deine Pflanzen, perfekt versorgt\nMit GrowMie wird Pflanzenpflege einfach und übersichtlich. Verwalte deine Pflanzen je nach Standort, behalte Gießintervalle im Blick und dokumentiere Pflegehinweise im persönlichen Tagebuch. Ideal für alle, die ihre Pflanzen nachhaltig versorgen möchten."
     },
     {
       "name": "Recycling-Sorglos",
@@ -175,10 +419,28 @@
       "audience": "Nachhaltigkeit",
       "tagline": "Richtige Mülltrennung ohne Rätselraten.",
       "description": "Schnelle Klarheit für Alltag, Haushalt und nachhaltigere Entscheidungen.",
-      "icon": "Recycling-Sorglos/AppIcon150x150.png",
-      "href": "Recycling-Sorglos/index.html",
+      "icon": "apps/Recycling-Sorglos/AppIcon150x150.png",
+      "href": "apps/Recycling-Sorglos/index.html",
       "appStoreUrl": "",
-      "badges": ["Recycling", "Alltag", "Nachhaltigkeit"],
+      "badges": [
+        "Recycling",
+        "Alltag",
+        "Nachhaltigkeit"
+      ],
+      "features": [
+        {
+          "titel": "Mülltrennung",
+          "text": "Schnell nachschlagen wohin welcher Müll gehört – ohne langes Suchen."
+        },
+        {
+          "titel": "Materialsuche",
+          "text": "Gezielt nach Materialien suchen und die richtige Tonne finden."
+        },
+        {
+          "titel": "Alltagstauglich",
+          "text": "Einfach, direkt und ohne unnötige Komplexität nutzbar."
+        }
+      ],
       "featured": true,
       "accent": "#69d5ff"
     },
@@ -189,12 +451,32 @@
       "audience": "Netzwerk",
       "tagline": "Internetleistung schnell messen und verstehen.",
       "description": "Download, Upload und Ping auf einen Blick, wenn Verbindung wirklich zählt.",
-      "icon": "SpeedTest-Sorglos/AppIcon150x150.png",
-      "href": "SpeedTest-Sorglos/index.html",
+      "icon": "apps/SpeedTest-Sorglos/AppIcon150x150.png",
+      "href": "apps/SpeedTest-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/speed-test-sorglos/id6739985969",
-      "badges": ["Netzwerk", "Speedtest", "Diagnose"],
+      "badges": [
+        "Netzwerk",
+        "Speedtest",
+        "Diagnose"
+      ],
+      "features": [
+        {
+          "titel": "Download & Upload",
+          "text": "Beide Richtungen präzise messen und mit einem Blick bewerten."
+        },
+        {
+          "titel": "Ping & Latenz",
+          "text": "Reaktionszeit des Netzwerks messen – wichtig für Gaming und Calls."
+        },
+        {
+          "titel": "Verlaufshistorie",
+          "text": "Ergebnisse speichern und Verbindungsqualität über Zeit vergleichen."
+        }
+      ],
       "featured": false,
-      "accent": "#76c9ff"
+      "accent": "#76c9ff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/c8/90/63c8905a-846a-6693-3f7a-51e693cf37ea/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "storeDescription": "Teste deine Internetgeschwindigkeit mit SpeedCheck Pro.\n\nErfahre in wenigen Sekunden, wie schnell deine Verbindung wirklich ist. SpeedCheck Pro misst Download, Upload, Ping und analysiert zusätzlich die Qualität deiner Verbindung für Streaming, Gaming und Videoanrufe."
     },
     {
       "name": "FotoSafe-Sorglos",
@@ -203,12 +485,32 @@
       "audience": "Privatsphäre",
       "tagline": "Private Fotos sicher verstecken und schützen.",
       "description": "Ein sicheres Fotoarchiv für Bilder, die nicht in der normalen Galerie sichtbar sein sollen.",
-      "icon": "FotoSafe-Sorglos/AppIcon150x150.png",
-      "href": "FotoSafe-Sorglos/index.html",
+      "icon": "apps/FotoSafe-Sorglos/AppIcon150x150.png",
+      "href": "apps/FotoSafe-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/fotosafe-sorglos/id6740139435",
-      "badges": ["Fotos", "Sicherheit", "Privat"],
+      "badges": [
+        "Fotos",
+        "Sicherheit",
+        "Privat"
+      ],
+      "features": [
+        {
+          "titel": "Sicherer Tresor",
+          "text": "Fotos aus der normalen Galerie entfernen und verschlüsselt speichern."
+        },
+        {
+          "titel": "Biometrie-Schutz",
+          "text": "Zugang nur per Face ID oder Touch ID – kein unbefugter Zugriff."
+        },
+        {
+          "titel": "Einfache Bedienung",
+          "text": "Fotos schnell importieren, organisieren und jederzeit ansehen."
+        }
+      ],
       "featured": false,
-      "accent": "#c4a0ff"
+      "accent": "#c4a0ff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8d/97/b0/8d97b0dc-46f4-b26b-d48f-c9ea1dd7eae6/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "FotoSafe-Sorglos: Dein sicherer Foto-Tresor\n\nSchütze und organisiere deine wertvollsten Erinnerungen mit FotoSafe-Sorglos – der Fotoverwaltung, die Privatsphäre an erste Stelle setzt."
     },
     {
       "name": "Eieruhr Pro-Sorglos",
@@ -217,12 +519,32 @@
       "audience": "Küche",
       "tagline": "Perfekte Eier mit einem kleinen präzisen Helfer.",
       "description": "Eine fokussierte Utility-App für verlässliche Küchenroutinen.",
-      "icon": "Eieruhr_Pro-Sorglos/AppIcon150x150.png",
-      "href": "Eieruhr_Pro-Sorglos/index.html",
+      "icon": "apps/Eieruhr_Pro-Sorglos/AppIcon150x150.png",
+      "href": "apps/Eieruhr_Pro-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/eieruhr-pro-sorglos/id6670164294",
-      "badges": ["Küche", "Timer", "Utility"],
+      "badges": [
+        "Küche",
+        "Timer",
+        "Utility"
+      ],
+      "features": [
+        {
+          "titel": "Präzise Timer",
+          "text": "Weich, mittel oder hart – für jede Vorliebe den richtigen Timer."
+        },
+        {
+          "titel": "Akustische Signale",
+          "text": "Deutliche Benachrichtigung wenn die Zeit abgelaufen ist."
+        },
+        {
+          "titel": "Einfaches Interface",
+          "text": "Direkt starten ohne Ablenkung – ein Fokus, eine Funktion."
+        }
+      ],
       "featured": false,
-      "accent": "#ffcb7d"
+      "accent": "#ffcb7d",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/fd/73/c8fd73f5-5efe-bc8b-10e1-8b6312ae56cd/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Eieruhr Pro – Perfekte Eier, jedes Mal\n\nNie wieder zu weich oder zu hart.\nEieruhr Pro berechnet die perfekte Kochzeit individuell – basierend auf Größe, Temperatur und gewünschtem Härtegrad."
     },
     {
       "name": "My Grill Timer-Sorglos",
@@ -231,12 +553,32 @@
       "audience": "Grillen",
       "tagline": "Mehr Überblick, wenn auf dem Rost alles gleichzeitig läuft.",
       "description": "Hilft bei Garzeiten und Timing für entspannteres Grillen mit mehreren Zutaten.",
-      "icon": "My_Grill_Timer-Sorglos/AppIcon150x150.png",
-      "href": "My_Grill_Timer-Sorglos/index.html",
+      "icon": "apps/My_Grill_Timer-Sorglos/AppIcon150x150.png",
+      "href": "apps/My_Grill_Timer-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/my-grill-timer-sorglos/id6670444680",
-      "badges": ["Grill", "Timer", "Kochen"],
+      "badges": [
+        "Grill",
+        "Timer",
+        "Kochen"
+      ],
+      "features": [
+        {
+          "titel": "Mehrere Timer",
+          "text": "Verschiedene Grillgut-Timer parallel laufen lassen ohne den Überblick zu verlieren."
+        },
+        {
+          "titel": "Garzeiten-Guide",
+          "text": "Empfohlene Garzeiten für Fleisch, Fisch und Gemüse direkt in der App."
+        },
+        {
+          "titel": "Alarm & Vibration",
+          "text": "Rechtzeitig erinnert werden – auch wenn das Handy in der Tasche ist."
+        }
+      ],
       "featured": false,
-      "accent": "#ff9e6d"
+      "accent": "#ff9e6d",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/fd/50/0efd50a2-2629-2f73-d4ba-a290c7bff033/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Perfekt grillen – ganz ohne Stress.\nOb Steak, Würstchen, Fisch oder Gemüse: Grilltimer Pro sorgt für punktgenaue Ergebnisse. Smarte Erinnerungen und adaptive Timer machen dein BBQ jedes Mal gelingsicher."
     },
     {
       "name": "ColorMood",
@@ -245,10 +587,28 @@
       "audience": "Self-Care",
       "tagline": "Stimmungen visuell erfassen, statt sie zu zerreden.",
       "description": "Eine sanfte App für emotionale Selbstwahrnehmung und kleine tägliche Check-ins.",
-      "icon": "ColorMood/AppIcon150x150.png",
-      "href": "ColorMood/index.html",
+      "icon": "apps/ColorMood/AppIcon150x150.png",
+      "href": "apps/ColorMood/index.html",
       "appStoreUrl": "",
-      "badges": ["Mood", "Achtsamkeit", "Farben"],
+      "badges": [
+        "Mood",
+        "Achtsamkeit",
+        "Farben"
+      ],
+      "features": [
+        {
+          "titel": "Farb-Check-in",
+          "text": "Stimmung täglich als Farbe festhalten – intuitiv und ohne viele Worte."
+        },
+        {
+          "titel": "Stimmungsverlauf",
+          "text": "Muster und Trends in der eigenen emotionalen Entwicklung erkennen."
+        },
+        {
+          "titel": "Ruhige Gestaltung",
+          "text": "Bewusst minimalistisch gestaltet – für einen Moment der Stille im Alltag."
+        }
+      ],
       "featured": true,
       "accent": "#ff8ec9"
     },
@@ -259,12 +619,32 @@
       "audience": "Inspiration",
       "tagline": "Worte, die leise wirken und lange bleiben.",
       "description": "Kurze Impulse und warme Botschaften für ruhige, persönliche Momente.",
-      "icon": "herzensworte/AppIcon150x150.png",
-      "href": "herzensworte/index.html",
+      "icon": "apps/herzensworte/AppIcon150x150.png",
+      "href": "apps/herzensworte/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/herzensworte/id6751487677",
-      "badges": ["Impulse", "Worte", "Teilen"],
+      "badges": [
+        "Impulse",
+        "Worte",
+        "Teilen"
+      ],
+      "features": [
+        {
+          "titel": "Tägliche Impulse",
+          "text": "Jeden Tag ein neues Wort oder ein neuer Gedanke als kleiner Moment für sich."
+        },
+        {
+          "titel": "Teilen",
+          "text": "Botschaften einfach mit Menschen teilen, denen sie etwas bedeuten könnten."
+        },
+        {
+          "titel": "Persönliche Favoriten",
+          "text": "Besondere Worte speichern und jederzeit wieder abrufen."
+        }
+      ],
       "featured": false,
-      "accent": "#f59bb4"
+      "accent": "#f59bb4",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e5/5a/73/e55a73ad-4009-4d5b-83f9-46ca5c2161c0/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+      "storeDescription": "Finde Motivation, innere Ruhe und Klarheit – jeden Tag.\n\nDie App begleitet dich auf deinem Weg zu mehr Achtsamkeit, Selbstvertrauen und mentaler Stärke."
     },
     {
       "name": "IdeaSpark",
@@ -273,12 +653,32 @@
       "audience": "Kreative Köpfe",
       "tagline": "Neue Ideen, wenn der Kopf gerade leer ist.",
       "description": "Schreibimpulse, Denkansätze und kreative Startpunkte für Content, Schule und Projekte.",
-      "icon": "IdeaSpark/AppIcon150x150.png",
-      "href": "IdeaSpark/index.html",
+      "icon": "apps/IdeaSpark/AppIcon150x150.png",
+      "href": "apps/IdeaSpark/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/ideaspark-one-idea-a-day/id6743702294",
-      "badges": ["Ideen", "Schreiben", "Kreativität"],
+      "badges": [
+        "Ideen",
+        "Schreiben",
+        "Kreativität"
+      ],
+      "features": [
+        {
+          "titel": "Tägliche Ideen-Prompts",
+          "text": "Jeden Tag ein neuer kreativer Impuls – für Content, Texte oder Projekte."
+        },
+        {
+          "titel": "Ideen-Journal",
+          "text": "Eigene Gedanken direkt festhalten und später wieder aufgreifen."
+        },
+        {
+          "titel": "Kreative Kategorien",
+          "text": "Impulse für Schreiben, Zeichnen, Business oder persönliche Projekte."
+        }
+      ],
       "featured": true,
-      "accent": "#ffb86b"
+      "accent": "#ffb86b",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b1/4d/a7/b14da728-d7ac-1026-6310-8fa8718271d5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Deine tägliche Inspirationsquelle.\n\nIdeaSpark hilft dir, jeden Tag eine Idee festzuhalten – sei es ein Gedanke, eine Vision oder ein spontaner Einfall. Baue dein persönliches Ideenarchiv auf und fördere deine Kreativität mit einer einfachen Routine."
     },
     {
       "name": "GedächtnisProfi-Sorglos",
@@ -287,12 +687,32 @@
       "audience": "Lernen",
       "tagline": "Gehirntraining mit Fragen, Kategorien und Vokabeln.",
       "description": "Für alle, die spielerisch lernen, wiederholen und geistig in Bewegung bleiben möchten.",
-      "icon": "GedaechtnisProfi-Sorglos/AppIcon150x150.png",
-      "href": "GedaechtnisProfi-Sorglos/index.html",
+      "icon": "apps/GedaechtnisProfi-Sorglos/AppIcon150x150.png",
+      "href": "apps/GedaechtnisProfi-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/ged%C3%A4chtnis-profi/id6740916047",
-      "badges": ["Lernen", "Gedächtnis", "Vokabeln"],
+      "badges": [
+        "Lernen",
+        "Gedächtnis",
+        "Vokabeln"
+      ],
+      "features": [
+        {
+          "titel": "Quiz & Fragen",
+          "text": "Wissen in verschiedenen Kategorien testen und festigen."
+        },
+        {
+          "titel": "Vokabel-Training",
+          "text": "Fremdsprachen-Vokabeln spielerisch und effektiv wiederholen."
+        },
+        {
+          "titel": "Fortschrittsanzeige",
+          "text": "Sehen wie sich Wissen und Merkfähigkeit mit der Zeit verbessern."
+        }
+      ],
       "featured": false,
-      "accent": "#8ab5ff"
+      "accent": "#8ab5ff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/c5/6e/22c56e85-c43e-4a82-9707-7b30e1d48dff/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Trainiere dein Gedächtnis wie ein Profi!\nGedächtnis Profi hilft dir, dein Gehirn fit zu halten – mit cleveren, unterhaltsamen Spielen und Übungen, die Konzentration, Merkfähigkeit und Denkgeschwindigkeit stärken."
     },
     {
       "name": "neurobyte",
@@ -301,12 +721,32 @@
       "audience": "Gaming",
       "tagline": "Sci-Fi-Quiz mit Netzwerk-Strategie und Progression.",
       "description": "Ein eigenständiges Spielgefühl für Menschen, die Wissen, Druck und Taktik mögen.",
-      "icon": "neurobyte/AppIcon150x150.png",
-      "href": "neurobyte/index.html",
+      "icon": "apps/neurobyte/AppIcon150x150.png",
+      "href": "apps/neurobyte/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/neurobyte-wissen-vs-ki/id6744259967",
-      "badges": ["Quiz", "Sci-Fi", "Strategie"],
+      "badges": [
+        "Quiz",
+        "Sci-Fi",
+        "Strategie"
+      ],
+      "features": [
+        {
+          "titel": "Wissen vs. KI",
+          "text": "Quizfragen gegen eine KI beantworten und das Netzwerk verteidigen."
+        },
+        {
+          "titel": "Progression",
+          "text": "Level aufsteigen, neue Fähigkeiten freischalten und stärker werden."
+        },
+        {
+          "titel": "Sci-Fi-Atmosphäre",
+          "text": "Einzigartiges visuelles Design das Wissen und Spannung verbindet."
+        }
+      ],
       "featured": true,
-      "accent": "#62dfff"
+      "accent": "#62dfff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/f4/25/9ff4252f-8d60-b127-9d36-18ad4214a350/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "NeuroByte – Wo Wissen auf Strategie trifft.\n\nStell dir vor: Ein neuronales Netzwerk wird von einer KI angegriffen – und nur du kannst es retten.\nBeantworte Quizfragen, sichere Knotenpunkte und setze PowerUps strategisch ein. Doch Vorsicht – die KI schlägt zurück."
     },
     {
       "name": "growzilla",
@@ -315,10 +755,28 @@
       "audience": "Progression",
       "tagline": "Wachsen, ernten, Quests abschließen, wiederkommen.",
       "description": "Farming- und Fortschrittsgefühl in einer motivierenden, leicht zugänglichen Spielstruktur.",
-      "icon": "growzilla/AppIcon150x150.png",
-      "href": "growzilla/index.html",
+      "icon": "apps/growzilla/AppIcon150x150.png",
+      "href": "apps/growzilla/index.html",
       "appStoreUrl": "",
-      "badges": ["Farming", "Quests", "Spiel"],
+      "badges": [
+        "Farming",
+        "Quests",
+        "Spiel"
+      ],
+      "features": [
+        {
+          "titel": "Farming-Mechanik",
+          "text": "Anbauen, wachsen lassen und zur richtigen Zeit ernten."
+        },
+        {
+          "titel": "Quest-System",
+          "text": "Aufgaben erfüllen, Belohnungen kassieren und immer einen Grund zum Zurückkommen haben."
+        },
+        {
+          "titel": "Progression",
+          "text": "Das eigene Farmgebiet ausbauen und immer neue Inhalte entdecken."
+        }
+      ],
       "featured": false,
       "accent": "#8fe36b"
     },
@@ -329,12 +787,32 @@
       "audience": "Casual Gaming",
       "tagline": "Endloser Slime-Spaß mit Power-Ups und Highscores.",
       "description": "Ein entspanntes aber süchtig machendes Casual-Game mit physikbasiertem Gameplay.",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/placeholder/AppIcon.png",
-      "href": "https://apps.apple.com/de/app/gravity-gloop/id6747406516",
+      "icon": "apps/Gravity-Gloop/AppIcon150x150.png",
+      "href": "apps/Gravity-Gloop/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/gravity-gloop/id6747406516",
-      "badges": ["Casual", "Physik", "Highscore"],
+      "badges": [
+        "Casual",
+        "Physik",
+        "Highscore"
+      ],
+      "features": [
+        {
+          "titel": "Physik-Gameplay",
+          "text": "Slime durch physikbasierte Hindernisse steuern – einfach zu lernen, schwer zu meistern."
+        },
+        {
+          "titel": "Power-Ups",
+          "text": "Besondere Fähigkeiten einsammeln und strategisch einsetzen."
+        },
+        {
+          "titel": "Endlos-Modus",
+          "text": "Wie weit kommst du? Highscores setzen und Rekorde brechen."
+        }
+      ],
       "featured": false,
-      "accent": "#b4f0a0"
+      "accent": "#b4f0a0",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/b9/9e/8bb99eda-fbc1-7bae-e733-0a6928e92f13/AppIcon-1x_U007emarketing-0-8-0-0-85-220-0.png/512x512bb.jpg",
+      "storeDescription": "Gravity Gloop\nSchleim, Schwerkraft und pure Action\n\nIn Gravity Gloop steuerst du einen mutigen Schleim durch ein endloses Labyrinth aus Hindernissen, Power-Ups und überraschenden Herausforderungen. Dein Ziel: Weiche aus, sammle so viel du kannst – und knacke deinen Highscore."
     },
     {
       "name": "Mein Einhorn-Sorglos",
@@ -343,12 +821,32 @@
       "audience": "Kinder & Fantasie",
       "tagline": "Pflegen, spielen und in eine bunte Welt eintauchen.",
       "description": "Ein liebevolles virtuelles Haustier für fantasievolle, spielerische Momente.",
-      "icon": "Mein_Einhorn-Sorglos/AppIcon150x150.png",
-      "href": "Mein_Einhorn-Sorglos/index.html",
+      "icon": "apps/Mein_Einhorn-Sorglos/AppIcon150x150.png",
+      "href": "apps/Mein_Einhorn-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/mein-einhorn/id6739771279",
-      "badges": ["Einhorn", "Minispiele", "Kinder"],
+      "badges": [
+        "Einhorn",
+        "Minispiele",
+        "Kinder"
+      ],
+      "features": [
+        {
+          "titel": "Virtuelles Haustier",
+          "text": "Das eigene Einhorn füttern, pflegen und glücklich machen."
+        },
+        {
+          "titel": "Minispiele",
+          "text": "Verschiedene kleine Spiele gemeinsam mit dem Einhorn erleben."
+        },
+        {
+          "titel": "Bunte Fantasiewelt",
+          "text": "Eine liebevoll gestaltete Welt voller Farben und magischer Momente."
+        }
+      ],
       "featured": false,
-      "accent": "#f7a4e8"
+      "accent": "#f7a4e8",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/78/0b/dd780b23-7881-5960-bcdb-51e5ca6c3da2/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Mein Einhorn – Sorglos ist ein Spiel, in dem du dich um dein eigenes Einhorn kümmerst.\nFüttere es, spiele mit ihm und sorge dafür, dass es glücklich bleibt. Dein Einhorn reagiert in Echtzeit auf deine Pflege und verändert seine Stimmung, auch wenn du die App gerade nicht geöffnet hast."
     },
     {
       "name": "Mein Malbuch-Sorglos",
@@ -357,12 +855,32 @@
       "audience": "Kinder & Kreativität",
       "tagline": "Ausmalen, ausprobieren, stolz sein.",
       "description": "Eine kindgerechte Kreativ-App mit Fokus auf Farben, Fantasie und einfache Bedienung.",
-      "icon": "Mein_Malbuch-Sorglos/AppIcon150x150.png",
-      "href": "Mein_Malbuch-Sorglos/index.html",
+      "icon": "apps/Mein_Malbuch-Sorglos/AppIcon150x150.png",
+      "href": "apps/Mein_Malbuch-Sorglos/index.html",
       "appStoreUrl": "https://apps.apple.com/de/app/mein-malbuch-sorglos/id6706979484",
-      "badges": ["Ausmalen", "Kinder", "Kreativität"],
+      "badges": [
+        "Ausmalen",
+        "Kinder",
+        "Kreativität"
+      ],
+      "features": [
+        {
+          "titel": "Ausmalbilder",
+          "text": "Viele verschiedene Motive zum digitalen Ausmalen mit bunten Farben."
+        },
+        {
+          "titel": "Einfache Bedienung",
+          "text": "Speziell für Kinderhände – intuitiv und ohne komplizierte Menüs."
+        },
+        {
+          "titel": "Kreativ ohne Grenzen",
+          "text": "Farben mischen, ausprobieren und das Ergebnis mit Stolz zeigen."
+        }
+      ],
       "featured": false,
-      "accent": "#ffbf73"
+      "accent": "#ffbf73",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/5a/53/7b5a53ac-87b9-1396-01ce-c0e523f09096/AppIcon-0-0-1x_U007epad-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Mein Malbuch - Sorglos ist die perfekte App für Kinder zwischen 4 und 10 Jahren, um ihrer Kreativität freien Lauf zu lassen. Unsere App bietet eine Vielzahl von liebevoll gestalteten Ausmalbildern in unterschiedlichen Kategorien, wie Tiere, Natur, Märchen und Fahrzeuge."
     }
   ]
 }

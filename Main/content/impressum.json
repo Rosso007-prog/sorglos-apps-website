@@ -1,0 +1,24 @@
+{
+  "_hinweis": "Alle Felder ausfüllen. Leere Felder werden nicht angezeigt.",
+
+  "name": "Tobias Rossmann",
+  "unternehmen": "Sorglos Apps",
+
+  "adresse": {
+    "strasse": "Grebenhainer Weg 18",
+    "plz": "13435",
+    "ort": "Berlin",
+    "land": "Deutschland"
+  },
+
+  "kontakt": {
+    "email": "sorglos.berlin@protonmail.com",
+    "telefon": ""
+  },
+
+  "steuernummer": "",
+  "ustIdNr": "",
+
+  "plattform_streitschlichtung": "https://ec.europa.eu/consumers/odr/",
+  "bereit_zur_streitschlichtung": false
+}

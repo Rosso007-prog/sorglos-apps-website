@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impressum – Sorglos Apps">
+    <title>Impressum | Sorglos Apps</title>
+    <link rel="stylesheet" href="styles/app-pages.css">
+</head>
+<body style="--accent:#6ee7c8; --accent-2:#7dafff;">
+    <header class="topbar">
+        <div class="shell">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark">S</span>
+                <span class="brand-copy">
+                    <strong>Sorglos Apps</strong>
+                    <span>Impressum</span>
+                </span>
+            </a>
+            <nav class="topnav">
+                <a href="../index.html">Startseite</a>
+                <a href="Datenschutz1.html">Datenschutz</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shell">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Rechtliches</p>
+                <h1>Impressum</h1>
+                <p class="lead">Angaben gemäß § 5 TMG</p>
+            </div>
+
+            <div class="hero-card" id="impressum-card">
+                <div class="hero-card-head">
+                    <div class="brand-mark">§</div>
+                    <div>
+                        <strong id="card-name">Sorglos Apps</strong>
+                        <span id="card-ort"></span>
+                    </div>
+                </div>
+                <div class="pills" id="card-pills"></div>
+            </div>
+        </section>
+
+        <section class="legal-stack" id="impressum-inhalt">
+            <article class="legal-card" style="opacity:.4">
+                <h3>Wird geladen…</h3>
+            </article>
+        </section>
+
+        <section class="cta-panel">
+            <div>
+                <p class="eyebrow">Weiter</p>
+                <h2>Fragen oder Anliegen?</h2>
+                <p>Für Support zu einer App erreichst du uns direkt über die zentrale Support-Seite.</p>
+            </div>
+            <div class="button-row">
+                <a class="button button-primary" href="../index.html">Zur Startseite</a>
+                <a class="button button-secondary" href="../Support/index.html">Zum Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer shell">
+        <p class="footer-copy">&copy; 2026 Sorglos Apps. Impressum.</p>
+        <span class="footer-version"></span>
+    </footer>
+
+    <script src="scripts/version.js"></script>
+    <script>
+        fetch("content/impressum.json")
+            .then(r => r.json())
+            .then(d => {
+                const adresse = d.adresse || {};
+                const kontakt = d.kontakt || {};
+
+                // Hero-Card befüllen
+                const cardName = [d.unternehmen, d.name].filter(Boolean).join(" · ");
+                document.getElementById("card-name").textContent = cardName || "Sorglos Apps";
+                document.getElementById("card-ort").textContent =
+                    [adresse.plz, adresse.ort, adresse.land].filter(Boolean).join(", ");
+
+                const pills = document.getElementById("card-pills");
+                if (kontakt.email) pills.innerHTML += `<span class="pill">E-Mail</span>`;
+                if (adresse.strasse) pills.innerHTML += `<span class="pill">Postanschrift</span>`;
+                pills.innerHTML += `<span class="pill">§ 5 TMG</span>`;
+
+                // Blocks aufbauen
+                const blocks = [];
+
+                // Block 1: Anbieter
+                let anbieter = "";
+                if (d.unternehmen) anbieter += `<p><strong>${d.unternehmen}</strong></p>`;
+                if (d.name)        anbieter += `<p>${d.name}</p>`;
+                if (adresse.strasse || adresse.ort) {
+                    anbieter += `<p>
+                        ${adresse.strasse ? adresse.strasse + "<br>" : ""}
+                        ${[adresse.plz, adresse.ort].filter(Boolean).join(" ")}
+                        ${adresse.land ? "<br>" + adresse.land : ""}
+                    </p>`;
+                }
+                if (anbieter) blocks.push({ titel: "Anbieter", inhalt: anbieter });
+
+                // Block 2: Kontakt
+                let kontaktHtml = "";
+                if (kontakt.email)
+                    kontaktHtml += `<p>E-Mail: <a href="mailto:${kontakt.email}">${kontakt.email}</a></p>`;
+                if (kontakt.telefon)
+                    kontaktHtml += `<p>Telefon: ${kontakt.telefon}</p>`;
+                if (kontaktHtml) blocks.push({ titel: "Kontakt", inhalt: kontaktHtml });
+
+                // Block 3: Steuer (nur wenn vorhanden)
+                let steuerHtml = "";
+                if (d.steuernummer) steuerHtml += `<p>Steuernummer: ${d.steuernummer}</p>`;
+                if (d.ustIdNr)      steuerHtml += `<p>USt-IdNr.: ${d.ustIdNr}</p>`;
+                if (steuerHtml) blocks.push({ titel: "Steuerliche Angaben", inhalt: steuerHtml });
+
+                // Block 4: Streitschlichtung (immer)
+                blocks.push({
+                    titel: "Streitschlichtung",
+                    inhalt: `
+                        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+                        <a href="${d.plattform_streitschlichtung}" target="_blank" rel="noopener">${d.plattform_streitschlichtung}</a></p>
+                        <p>${d.bereit_zur_streitschlichtung
+                            ? "Wir sind bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+                            : "Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+                        }</p>
+                    `
+                });
+
+                // Rendern
+                document.getElementById("impressum-inhalt").innerHTML = blocks.map(b => `
+                    <article class="legal-card">
+                        <h3>${b.titel}</h3>
+                        ${b.inhalt}
+                    </article>
+                `).join("");
+            })
+            .catch(() => {
+                document.getElementById("impressum-inhalt").innerHTML =
+                    `<article class="legal-card"><h3>Fehler</h3><p>Impressum konnte nicht geladen werden.</p></article>`;
+            });
+    </script>
+</body>
+</html>

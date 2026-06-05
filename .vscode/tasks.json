@@ -4,13 +4,11 @@
     {
       "label": "Server starten & Cache leeren",
       "type": "shell",
-      "command": "pkill -f 'http.server 8000' 2>/dev/null; sleep 0.3; python3 -m http.server 8000",
+      "command": "node Main/scripts/scan-screenshots.js; pkill -f 'http.server 8000' 2>/dev/null; rm -rf .vscode/.chrome-debug-profile; sleep 0.3; python3 -m http.server 8000",
       "cwd": "${workspaceFolder}",
       "isBackground": true,
       "problemMatcher": {
-        "pattern": {
-          "regexp": "^$"
-        },
+        "pattern": { "regexp": "^$" },
         "background": {
           "activeOnStart": true,
           "beginsPattern": "^$",
@@ -21,6 +19,17 @@
         "reveal": "silent",
         "panel": "shared"
       }
+    },
+    {
+      "label": "App Store Sync",
+      "type": "shell",
+      "command": "node Main/scripts/sync-appstore.js",
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
     }
   ]
 }

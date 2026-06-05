@@ -1,3 +1,5 @@
 .DS_Store
 .local-test-server.log
 .local-test-server.pid
+.vscode/.chrome-debug-profile
+Main/content/sync-timestamp.json

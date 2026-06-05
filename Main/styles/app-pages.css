@@ -353,6 +353,151 @@ h2 {
     color: #111;
 }
 
+/* ── Screenshots ─────────────────────────────────────────── */
+.screenshot-scroll {
+    display: flex;
+    gap: 0.85rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.12) transparent;
+    padding: 0.25rem 0 0.75rem;
+    cursor: grab;
+}
+
+.screenshot-scroll:active {
+    cursor: grabbing;
+}
+
+.screenshot-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+.screenshot-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.screenshot-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+    border-radius: 999px;
+}
+
+.screenshot-frame {
+    flex-shrink: 0;
+    width: 12rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: zoom-in;
+    transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.screenshot-frame:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-strong, rgba(255,255,255,0.18));
+}
+
+.screenshot-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+/* ── Lightbox ────────────────────────────────────────────── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-img {
+    max-width: min(90vw, 26rem);
+    max-height: 90vh;
+    border-radius: 1.6rem;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+    object-fit: contain;
+    transition: transform 220ms ease;
+    transform: scale(0.94);
+}
+
+.lightbox.is-open .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 180ms ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.16);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 180ms ease;
+}
+
+.lightbox-prev { left: 1.25rem; }
+.lightbox-next { right: 1.25rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255,255,255,0.16);
+}
+
+.lightbox-counter {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.06em;
+}
+
 .legal-stack {
     display: grid;
     gap: 1rem;
@@ -402,46 +547,167 @@ h2 {
     margin: 2rem 0 4rem;
 }
 
+
 .site-footer {
     padding: 0 0 2.5rem;
 }
 
 .footer-copy {
-    text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    color: var(--muted);
 }
 
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-version {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+
+/* ── Tablet ─────────────────────────────────────────────── */
 @media (max-width: 1040px) {
-    .hero,
-    .feature-grid,
-    .two-col,
-    .stats,
-    .cta-panel,
-    .form-grid {
+    .hero {
         grid-template-columns: 1fr;
     }
 
-    .cta-panel {
-        display: grid;
+    .hero-card {
+        max-width: 32rem;
     }
-}
 
-@media (max-width: 760px) {
-    .topbar .shell {
+    .feature-grid,
+    .two-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-panel {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ── Mobil ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    /* Topbar: Nav unter Brand */
+    .topbar .shell {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.85rem 0;
+    }
+
     .topnav {
         width: 100%;
+        gap: 0.4rem;
     }
 
     .topnav a {
-        flex: 1 1 160px;
+        flex: 1 1 auto;
         text-align: center;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.82rem;
     }
 
+    /* Hero */
     .hero {
-        padding-top: 3rem;
+        padding: 2rem 0 1.5rem;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        max-width: none;
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .hero-copy .lead {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+
+    .hero-actions,
+    .button-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.65rem;
+        margin-top: 1.25rem;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hero-Card: kompakter */
+    .hero-card {
+        max-width: none;
+        padding: 1.2rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    /* Grids → 1 Spalte */
+    .feature-grid,
+    .two-col,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Formular */
+    .field input,
+    .field select,
+    .field textarea {
+        font-size: 1rem;
+        padding: 0.85rem 0.9rem;
+    }
+
+    .field textarea {
+        min-height: 130px;
+    }
+
+    /* Sections */
+    .section {
+        padding-top: 2.5rem;
+    }
+
+    /* CTA */
+    .cta-panel {
+        padding: 1.3rem;
+        margin-bottom: 2.5rem;
+        gap: 1.2rem;
+    }
+
+    /* Legal */
+    .legal-card {
+        padding: 1.2rem;
+    }
+
+    /* Footer */
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-bottom: 2rem;
     }
 }

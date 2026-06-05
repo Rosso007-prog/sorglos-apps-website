@@ -98,9 +98,8 @@ const renderFilters = (apps, onFilterChange) => {
 };
 
 const getAppIcon = (app) => {
-    if (app.href && !app.href.startsWith("http")) {
-        return `${app.slug}/AppIcon150x150.png`;
-    }
+    if (app.storeIcon) return app.storeIcon;
+    if (app.icon && !app.icon.startsWith("http")) return app.icon;
     return app.icon || "";
 };
 
@@ -114,7 +113,10 @@ const createAppCard = (app) => {
     <article class="app-card">
         <div class="app-card-shell">
             <div class="app-card-top">
-                ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
+                <div class="app-icon-wrap">
+                    ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
+                    ${!storeHref ? `<span class="app-wip-badge">In Entwicklung</span>` : ""}
+                </div>
                 <div class="app-card-copy">
                     <strong class="app-card-name">${app.name}</strong>
                     <span class="app-tagline">${app.tagline}</span>
@@ -142,11 +144,12 @@ const renderApps = (apps, activeFilter = "Alle") => {
 
 const initPortfolio = async () => {
     try {
-        const response = await fetch("Main/content/apps.json");
+        const response = await fetch("Main/content/apps.json?v=" + Date.now());
         if (!response.ok) throw new Error("Portfolio konnte nicht geladen werden.");
 
         const data = await response.json();
-        const apps = Array.isArray(data.apps) ? data.apps : [];
+        const apps = (Array.isArray(data.apps) ? data.apps : [])
+            .sort((a, b) => (b.appStoreUrl ? 1 : 0) - (a.appStoreUrl ? 1 : 0));
 
         setMetrics(apps);
         renderFeatured(apps);
