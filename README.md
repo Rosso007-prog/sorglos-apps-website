@@ -11,6 +11,22 @@ Im Projektordner liegen zwei anklickbare Dateien:
 
 Mit `LokalTesten.command` startest du einen lokalen Testserver auf `http://localhost:8000`.
 
+## VS Code Debuggen
+
+Für VS Code ist eine Startkonfiguration vorhanden:
+
+- `.vscode/launch.json`
+
+So startest du die Website direkt über VS Code:
+
+1. Projekt in VS Code öffnen
+2. Links auf `Run and Debug`
+3. `Website lokal testen` auswählen
+4. Auf `Debuggen starten` klicken
+
+VS Code startet dann automatisch einen lokalen Server auf `http://localhost:8000` und öffnet die Website im Browser.
+Wenn du das Debugging stoppst, wird auch der Testserver beendet.
+
 ## GitHub Pages
 
 Dieses Repository ist für statisches Hosting vorbereitet.
@@ -33,8 +49,13 @@ Empfohlene Einstellungen:
 
 ## Struktur
 
-- `index.html` zentrale Startseite
-- `Support/` Support-Seite
+- `index.html` zentrale Startseite mit datengetriebenem Portfolio
+- `Main/content/apps.json` zentrale App-Daten für die Startseite
+- `Main/styles/home.css` Styling der Startseite
+- `Main/styles/app-pages.css` gemeinsames Styling für Unterseiten
+- `Main/scripts/home.js` Navigation, Filter und Portfolio-Rendering
+- `Support/` zentrale Support-Seite
 - `Main/Datenschutz1.html` globale Datenschutzerklärung
 - `*/index.html` App-Landingpages
 - `*/Datenschutz/Datenschutz.html` app-spezifische Datenschutzerklärungen
+- `docs/PROJECT_STRUCTURE.md` kurze Architekturübersicht

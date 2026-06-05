@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sorglos Apps entwickelt praktische und kreative iOS-Apps für Alltag, Familie, Produktivität und Unterhaltung.">
-    <meta name="theme-color" content="#0e1a2b">
+    <meta name="description" content="Sorglos Apps entwickelt markante iOS-Apps für Business, Familie, Kreativität, Lifestyle und spielerische Erlebnisse.">
+    <meta name="theme-color" content="#07111d">
     <meta property="og:title" content="Sorglos Apps">
-    <meta property="og:description" content="Entdecke praktische und kreative Apps für Alltag, Familie, Arbeit und Freizeit.">
+    <meta property="og:description" content="Ein kuratiertes Portfolio aus iOS-Apps mit starker Identität, echtem Nutzen und eigenem Charakter.">
     <meta property="og:type" content="website">
-    <title>Sorglos Apps | Apps für Alltag, Familie und Produktivität</title>
-    <link rel="stylesheet" href="Main/home.css">
+    <title>Sorglos Apps | Starkes App-Portfolio für Alltag, Business und Ideen</title>
+    <link rel="stylesheet" href="Main/styles/home.css">
 </head>
 <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
     <header class="site-header">
         <div class="nav-shell">
             <a class="brand" href="index.html" aria-label="Sorglos Apps Startseite">
                 <span class="brand-mark">S</span>
                 <span class="brand-copy">
                     <strong>Sorglos Apps</strong>
-                    <span>Hilfreiche Apps für Alltag, Familie und kreative Ideen</span>
+                    <span>Apps mit Substanz, Charakter und echter Alltagstauglichkeit</span>
                 </span>
             </a>
 
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Navigation öffnen">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-                <a href="#highlights">Highlights</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#collections">Kollektionen</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#support">Support</a>
+                <a href="Support/index.html">Support</a>
                 <a href="Main/Datenschutz1.html">Datenschutz</a>
             </nav>
         </div>
@@ -40,231 +44,194 @@
     <main>
         <section class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">Sorglos Apps</p>
-                <h1>Apps, die den Alltag einfacher und Ideen lebendiger machen.</h1>
+                <p class="eyebrow">Digital Product Studio</p>
+                <h1>Nicht einfach Apps. Ein ganzes Sorglos-Universum mit Haltung.</h1>
                 <p class="lead">
-                    Von Produktivität und Organisation über Familie und Lernen bis hin zu Kreativität,
-                    Spiel und Self-Care: Hier findest du Apps, die praktisch sind, schnell verstanden werden
-                    und Freude in den Alltag bringen.
+                    Zwischen produktiven Workflows, Familienalltag, spielerischer Motivation und kreativen Ideen
+                    entsteht hier ein Portfolio, das nicht nach Baukasten aussieht. Jede App hat ein klares Ziel,
+                    eine eigene Energie und einen echten Platz im Leben ihrer Nutzer.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#portfolio">Apps entdecken</a>
-                    <a class="button button-secondary" href="Support/index.html">Support kontaktieren</a>
+                    <a class="button button-primary" href="#portfolio">Portfolio ansehen</a>
+                    <a class="button button-secondary" href="#support-band">Support & Kontakt</a>
                 </div>
-                <ul class="hero-points">
-                    <li>Klare App-Seiten mit direkten Infos und Datenschutz</li>
-                    <li>Fokus auf Alltagstauglichkeit, Familiennutzen und Motivation</li>
-                    <li>Vom Business-Tool bis zur kreativen Freizeit-App</li>
+                <ul class="hero-notes">
+                    <li>Eigenständige Marken pro App statt austauschbarer Kacheln</li>
+                    <li>Klare Struktur für GitHub, Cloudflare und lokale Tests</li>
+                    <li>Von Business bis Familie, von Fokus bis Fantasie</li>
                 </ul>
             </div>
 
-            <div class="hero-panel">
-                <div class="status-card">
-                    <p class="status-label">Beliebte Einsatzbereiche</p>
-                    <div class="status-grid">
+            <div class="hero-stage" aria-label="Ausgewählte Apps im Spotlight">
+                <div class="stage-panel stage-panel-main">
+                    <p class="stage-kicker">Featured Selection</p>
+                    <div id="featured-spotlight" class="spotlight-grid">
+                        <article class="spotlight-card is-loading">
+                            <span class="spotlight-chip">Lädt</span>
+                            <h2>Portfolio wird geladen</h2>
+                            <p>Die kuratierte Auswahl wird gleich eingeblendet.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="stage-panel stage-panel-side">
+                    <p class="stage-kicker">Studio Signal</p>
+                    <div class="signal-grid">
                         <article>
-                            <strong>Produktiv arbeiten</strong>
-                            <span>Organisation, Buchhaltung, Inventar und smarte Prozesse</span>
+                            <strong id="metric-apps">0</strong>
+                            <span>Apps mit eigener Landingpage</span>
                         </article>
                         <article>
-                            <strong>Familie begleiten</strong>
-                            <span>Apps für Eltern, Kinder, Routinen und alltagstaugliche Unterstützung</span>
+                            <strong id="metric-categories">0</strong>
+                            <span>klare Produktkategorien</span>
                         </article>
                         <article>
-                            <strong>Kreativ & motiviert bleiben</strong>
-                            <span>Inspiration, Spiele, Lerninhalte und kleine Motivationshelfer</span>
+                            <strong id="metric-featured">0</strong>
+                            <span>kuratierte Highlights</span>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="highlights" class="section metrics">
-            <article>
-                <strong>15+</strong>
-                <span>App-Projekte im Portfolio</span>
-            </article>
-            <article>
-                <strong>4</strong>
-                <span>Schwerpunkte: Alltag, Familie, Business und Kreativität</span>
-            </article>
-            <article>
-                <strong>1</strong>
-                <span>Zentrale Anlaufstelle für Infos, Support und Datenschutz</span>
-            </article>
+        <section class="trust-band" aria-label="Studioschwerpunkte">
+            <div class="trust-item">
+                <span>Business</span>
+                <strong>Workflows, Ordnung, Daten und Struktur</strong>
+            </div>
+            <div class="trust-item">
+                <span>Familie</span>
+                <strong>Begleitung, Lernen, Routine und Entlastung</strong>
+            </div>
+            <div class="trust-item">
+                <span>Kreativität</span>
+                <strong>Impulse, Ideen, Farben, Spiel und Neugier</strong>
+            </div>
+        </section>
+
+        <section id="showcase" class="section section-showcase">
+            <div class="section-head">
+                <p class="eyebrow">Showcase</p>
+                <h2>Ein Portfolio, das nicht nach Template aussieht.</h2>
+                <p>
+                    Statt einer Sammlung beliebiger Projekte zeigt Sorglos Apps ein System aus klaren Produkten,
+                    sauberen Strukturen und eigenständigen Identitäten. Genau das soll man schon auf der Startseite spüren.
+                </p>
+            </div>
+
+            <div class="showcase-grid">
+                <article class="showcase-card">
+                    <span class="showcase-label">Produktwelt</span>
+                    <h3>Jede App bekommt ihren eigenen Auftritt.</h3>
+                    <p>Eigene Landingpages, eigene Datenschutzseite, klare Tonalität und ein konsistenter visueller Rahmen.</p>
+                </article>
+                <article class="showcase-card">
+                    <span class="showcase-label">Technische Basis</span>
+                    <h3>Statisch, schnell und deploybar ohne Frickelei.</h3>
+                    <p>GitHub-tauglich, Cloudflare-ready und lokal direkt testbar über VS Code oder per Startdatei.</p>
+                </article>
+                <article class="showcase-card">
+                    <span class="showcase-label">Wirkung</span>
+                    <h3>Mehr Studio als Sammelordner.</h3>
+                    <p>Die Seite wirkt wie eine echte Produktmarke und nicht wie ein Ablageort für einzelne App-Links.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="collections" class="section">
+            <div class="section-head">
+                <p class="eyebrow">Kollektionen</p>
+                <h2>Fünf Richtungen. Ein gemeinsamer Anspruch.</h2>
+                <p>Die App-Welten sind bewusst gruppiert, damit Besucher sofort das finden, was zu ihrem Alltag passt.</p>
+            </div>
+            <div id="category-grid" class="category-grid">
+                <article class="category-card">
+                    <span class="category-badge">Lädt</span>
+                    <h3>Kollektionen werden geladen</h3>
+                    <p>Die Kategorien werden auf Basis des Portfolios aufgebaut.</p>
+                </article>
+            </div>
         </section>
 
         <section id="portfolio" class="section">
-            <div class="section-head">
-                <p class="eyebrow">Portfolio</p>
-                <h2>Eine Auswahl aus dem Sorglos App-Universum.</h2>
-                <p>Jede App löst ein konkretes Problem oder schafft einen klaren Mehrwert im Alltag.</p>
+            <div class="section-head section-head-portfolio">
+                <div>
+                    <p class="eyebrow">Portfolio</p>
+                    <h2>Alle Apps im Überblick.</h2>
+                    <p>Filtere nach Themenwelt und spring direkt in die passende App-Seite.</p>
+                </div>
+                <div id="filter-bar" class="filter-bar" aria-label="Portfolio filtern"></div>
             </div>
 
-            <div class="app-grid">
-                <article class="app-card app-card-featured">
-                    <img src="Anything2ERP/AppIcon150x150.png" alt="Anything2ERP App Icon">
-                    <div>
-                        <p class="app-tag">Business</p>
-                        <h3>Anything2ERP</h3>
-                        <p>Verbindet mobile Eingaben, Sprache und Geräteintegration mit strukturierten ERP-Workflows.</p>
+            <div id="app-grid" class="app-grid">
+                <article class="app-card app-card-skeleton">
+                    <div class="app-card-shell">
+                        <div class="app-card-copy">
+                            <span class="app-chip">Lädt</span>
+                            <h3>Portfolio wird geladen</h3>
+                            <p>Die App-Karten erscheinen gleich automatisch.</p>
+                        </div>
                     </div>
-                    <a href="Anything2ERP/index.html">Mehr erfahren</a>
                 </article>
+            </div>
 
-                <article class="app-card">
-                    <img src="Buchhaltung-Sorglos/AppIcon150x150.png" alt="Buchhaltung-Sorglos App Icon">
-                    <div>
-                        <p class="app-tag">Finanzen</p>
-                        <h3>Buchhaltung-Sorglos</h3>
-                        <p>Behalte Rechnungen, Angebote und wichtige Zahlen einfach und übersichtlich im Griff.</p>
-                    </div>
-                    <a href="Buchhaltung-Sorglos/index.html">Mehr erfahren</a>
+            <noscript>
+                <p class="noscript-note">Für die dynamische Portfolioansicht bitte JavaScript aktivieren.</p>
+            </noscript>
+        </section>
+
+        <section class="section section-principles">
+            <div class="section-head">
+                <p class="eyebrow">Prinzipien</p>
+                <h2>Woran man Sorglos Apps erkennt.</h2>
+            </div>
+            <div class="principle-grid">
+                <article class="principle-card">
+                    <strong>01</strong>
+                    <h3>Direkter Nutzen</h3>
+                    <p>Jede App löst ein klares Problem, begleitet eine Routine oder schenkt einen konkreten Moment von Freude.</p>
                 </article>
-
-                <article class="app-card">
-                    <img src="Sortly-Sorglos/AppIcon150x150.png" alt="Sortly-Sorglos App Icon">
-                    <div>
-                        <p class="app-tag">Organisation</p>
-                        <h3>Sortly-Sorglos</h3>
-                        <p>Inventar, Materialien und Lagerbestände logisch ordnen und schneller wiederfinden.</p>
-                    </div>
-                    <a href="Sortly-Sorglos/index.html">Mehr erfahren</a>
+                <article class="principle-card">
+                    <strong>02</strong>
+                    <h3>Konsistente Qualität</h3>
+                    <p>Vom ersten Eindruck über Support bis Datenschutz wirkt alles wie aus einem Guss.</p>
                 </article>
-
-                <article class="app-card">
-                    <img src="Sorglos-Wachsen/AppIcon150x150.png" alt="Sorglos-Wachsen App Icon">
-                    <div>
-                        <p class="app-tag">Familie</p>
-                        <h3>Sorglos-Wachsen</h3>
-                        <p>Hilft Eltern dabei, Entwicklung, Alltag und wichtige Routinen entspannter zu begleiten.</p>
-                    </div>
-                    <a href="Sorglos-Wachsen/index.html">Mehr erfahren</a>
-                </article>
-
-                <article class="app-card">
-                    <img src="Schwangerschaft-Sorglos/AppIcon150x150.png" alt="Schwangerschaft-Sorglos App Icon">
-                    <div>
-                        <p class="app-tag">Begleitung</p>
-                        <h3>Schwangerschaft-Sorglos</h3>
-                        <p>Wichtige Wocheninfos, Erinnerungen und Orientierung für die Schwangerschaft an einem Ort.</p>
-                    </div>
-                    <a href="Schwangerschaft-Sorglos/index.html">Mehr erfahren</a>
-                </article>
-
-                <article class="app-card">
-                    <img src="Mein_Malbuch-Sorglos/AppIcon150x150.png" alt="Mein Malbuch-Sorglos App Icon">
-                    <div>
-                        <p class="app-tag">Kinder</p>
-                        <h3>Mein Malbuch-Sorglos</h3>
-                        <p>Kreativer Malspaß für Kinder mit einfacher Bedienung und viel Raum für Fantasie.</p>
-                    </div>
-                    <a href="Mein_Malbuch-Sorglos/index.html">Mehr erfahren</a>
-                </article>
-
-                <article class="app-card">
-                    <img src="IdeaSpark/AppIcon150x150.png" alt="IdeaSpark App Icon">
-                    <div>
-                        <p class="app-tag">Inspiration</p>
-                        <h3>IdeaSpark</h3>
-                        <p>Kreative Denkanstöße, Schreibideen und spontane Impulse für neue Projekte.</p>
-                    </div>
-                    <a href="IdeaSpark/index.html">Mehr erfahren</a>
-                </article>
-
-                <article class="app-card">
-                    <img src="neurobyte/AppIcon150x150.png" alt="Neurobyte App Icon">
-                    <div>
-                        <p class="app-tag">Gaming</p>
-                        <h3>Neurobyte</h3>
-                        <p>Strategisches Sci-Fi-Quiz mit Fortschrittssystem, Wissensduellen und eigenständiger Welt.</p>
-                    </div>
-                    <a href="neurobyte/index.html">Mehr erfahren</a>
-                </article>
-
-                <article class="app-card">
-                    <img src="Recycling-Sorglos/AppIcon150x150.png" alt="Recycling-Sorglos App Icon">
-                    <div>
-                        <p class="app-tag">Alltag</p>
-                        <h3>Recycling-Sorglos</h3>
-                        <p>Erklärt schnell, wie Abfall richtig getrennt und nachhaltiger entsorgt werden kann.</p>
-                    </div>
-                    <a href="Recycling-Sorglos/index.html">Mehr erfahren</a>
+                <article class="principle-card">
+                    <strong>03</strong>
+                    <h3>Mut zur Persönlichkeit</h3>
+                    <p>Die Marke bleibt zusammenhängend, aber jede App darf ihren eigenen Charakter sichtbar ausspielen.</p>
                 </article>
             </div>
         </section>
 
-        <section class="section">
-            <div class="section-head">
-                <p class="eyebrow">Für wen?</p>
-                <h2>Apps für Menschen mit echten Aufgaben im Alltag.</h2>
-                <p>Das Portfolio ist so aufgebaut, dass unterschiedliche Zielgruppen direkt passende Tools finden.</p>
-            </div>
-
-            <div class="capability-grid">
-                <article class="capability-card ok">
-                    <h3>Selbstständige & kleine Teams</h3>
-                    <ul>
-                        <li>Struktur für Buchhaltung und Angebote</li>
-                        <li>Inventar und Prozesse besser organisieren</li>
-                        <li>Mobile Helfer für produktive Routinen</li>
-                    </ul>
-                </article>
-
-                <article class="capability-card limit">
-                    <h3>Familien & Privatnutzer</h3>
-                    <ul>
-                        <li>Begleitung in Schwangerschaft und Elternalltag</li>
-                        <li>Kreative und spielerische Apps für Kinder</li>
-                        <li>Praktische Tools für Haushalt, Freizeit und Motivation</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="support" class="section process-section">
-            <div class="section-head">
+        <section id="support-band" class="section support-band">
+            <div class="support-copy">
                 <p class="eyebrow">Support</p>
-                <h2>Schnelle Hilfe, wenn du Fragen zu einer App hast.</h2>
-                <p>Auf der Support-Seite kannst du direkt die passende App wählen und eine Nachricht senden.</p>
+                <h2>Fragen zu einer App, Feedback oder ein konkretes Anliegen?</h2>
+                <p>
+                    Dafür gibt es eine zentrale Support-Seite mit klarer App-Auswahl und einem direkten Kontaktweg.
+                    Kein Rätselraten, kein Suchspiel, kein halbfertiger Footer-Link.
+                </p>
             </div>
-
-            <div class="process-grid">
-                <article>
-                    <span>01</span>
-                    <h3>App auswählen</h3>
-                    <p>Wähle direkt das Produkt aus, zu dem du Hilfe oder Feedback geben möchtest.</p>
-                </article>
-                <article>
-                    <span>02</span>
-                    <h3>Problem beschreiben</h3>
-                    <p>Kurze, klare Nachricht mit allen wichtigen Infos für eine schnellere Rückmeldung.</p>
-                </article>
-                <article>
-                    <span>03</span>
-                    <h3>Antwort erhalten</h3>
-                    <p>Support und Datenschutz sind zentral erreichbar und logisch verknüpft.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section cta-section">
-            <div>
-                <p class="eyebrow">Direkt loslegen</p>
-                <h2>Entdecke die passende App für Arbeit, Familie oder Freizeit.</h2>
-                <p>Oder melde dich direkt, wenn du Unterstützung bei einem bestehenden Produkt brauchst.</p>
-            </div>
-            <div class="cta-actions">
+            <div class="support-actions">
                 <a class="button button-primary" href="Support/index.html">Zum Support</a>
-                <a class="button button-secondary" href="#portfolio">Apps ansehen</a>
+                <a class="button button-secondary" href="Main/Datenschutz1.html">Datenschutz lesen</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Sorglos Apps. Alle Rechte vorbehalten.</p>
+        <div class="footer-shell">
+            <div>
+                <strong>Sorglos Apps</strong>
+                <p>Kuratiertes App-Portfolio für Menschen, die starke digitale Produkte sofort spüren wollen.</p>
+            </div>
+            <div class="footer-links">
+                <a href="Support/index.html">Support</a>
+                <a href="Main/Datenschutz1.html">Datenschutz</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="Main/home.js"></script>
+    <script src="Main/scripts/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,187 @@
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
+const spotlightRoot = document.querySelector("#featured-spotlight");
+const categoryRoot = document.querySelector("#category-grid");
+const gridRoot = document.querySelector("#app-grid");
+const filterRoot = document.querySelector("#filter-bar");
+
+const accentMap = {
+    Business: "rgba(138, 182, 255, 0.2)",
+    Familie: "rgba(143, 244, 200, 0.2)",
+    Lifestyle: "rgba(255, 199, 133, 0.2)",
+    Mind: "rgba(194, 166, 255, 0.2)",
+    Play: "rgba(255, 129, 150, 0.2)"
+};
+
+if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+}
+
+const setMetrics = (apps) => {
+    const featured = apps.filter((app) => app.featured);
+    const categories = [...new Set(apps.map((app) => app.category))];
+
+    const appMetric = document.querySelector("#metric-apps");
+    const categoryMetric = document.querySelector("#metric-categories");
+    const featuredMetric = document.querySelector("#metric-featured");
+
+    if (appMetric) appMetric.textContent = String(apps.length);
+    if (categoryMetric) categoryMetric.textContent = String(categories.length);
+    if (featuredMetric) featuredMetric.textContent = String(featured.length);
+};
+
+const renderFeatured = (apps) => {
+    if (!spotlightRoot) return;
+
+    const featured = apps.filter((app) => app.featured).slice(0, 4);
+    spotlightRoot.innerHTML = featured.map((app) => {
+        const linkHref = (app.href && !app.href.startsWith("http")) ? app.href : (app.appStoreUrl || "#");
+        const target = app.appStoreUrl && app.href.startsWith("http") ? ' target="_blank" rel="noopener"' : "";
+        return `
+        <a class="spotlight-card" href="${linkHref}"${target} style="--spotlight-glow:${app.accent || accentMap[app.category] || "rgba(143, 244, 200, 0.18)"};">
+            <span class="spotlight-chip">${app.category}</span>
+            <h3>${app.name}</h3>
+            <p>${app.tagline}</p>
+            <strong>${app.audience}</strong>
+        </a>
+        `;
+    }).join("");
+};
+
+const categoryOrder = ["Business", "Familie", "Lifestyle", "Mind", "Play"];
+
+const renderCategories = (apps) => {
+    if (!categoryRoot) return;
+
+    const categories = categoryOrder.filter((category) => apps.some((app) => app.category === category));
+    const copy = {
+        Business: "Struktur, Produktivität und Tools für echte Arbeitsabläufe.",
+        Familie: "Begleiter für Eltern, Kinder und entspanntere Routinen.",
+        Lifestyle: "Praktische Helfer für Alltag, Ordnung und persönliche Gewohnheiten.",
+        Mind: "Ideen, Sprache, Emotion und Fokus in digitaler Form.",
+        Play: "Spielerische Welten, Farbe, Motivation und kreative Energie."
+    };
+
+    categoryRoot.innerHTML = categories.map((category) => {
+        const count = apps.filter((app) => app.category === category).length;
+        return `
+            <article class="category-card" style="--category-glow:${accentMap[category] || "rgba(143, 244, 200, 0.18)"};">
+                <span class="category-badge">${category}</span>
+                <h3>${category === "Mind" ? "Ideen & Fokus" : category}</h3>
+                <p>${copy[category] || "Ein klarer Themenbereich innerhalb des Sorglos-Portfolios."}</p>
+                <strong>${count}</strong>
+            </article>
+        `;
+    }).join("");
+};
+
+const renderFilters = (apps, onFilterChange) => {
+    if (!filterRoot) return;
+
+    const categories = ["Alle", ...categoryOrder.filter((category) => apps.some((app) => app.category === category))];
+    filterRoot.innerHTML = categories.map((category, index) => `
+        <button class="filter-button${index === 0 ? " is-active" : ""}" type="button" data-filter="${category}">
+            ${category}
+        </button>
+    `).join("");
+
+    filterRoot.querySelectorAll(".filter-button").forEach((button) => {
+        button.addEventListener("click", () => {
+            filterRoot.querySelectorAll(".filter-button").forEach((entry) => entry.classList.remove("is-active"));
+            button.classList.add("is-active");
+            onFilterChange(button.dataset.filter || "Alle");
+        });
+    });
+};
+
+const getAppIcon = (app) => {
+    if (app.href && !app.href.startsWith("http")) {
+        return `${app.slug}/AppIcon150x150.png`;
+    }
+    return app.icon || "";
+};
+
+const createAppCard = (app) => {
+    const hasLandingPage = app.href && !app.href.startsWith("http");
+    const landingHref = hasLandingPage ? app.href : null;
+    const storeHref = app.appStoreUrl || null;
+    const iconSrc = getAppIcon(app);
+
+    return `
+    <article class="app-card">
+        <div class="app-card-shell">
+            <div class="app-card-top">
+                ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
+                <div class="app-card-copy">
+                    <strong class="app-card-name">${app.name}</strong>
+                    <span class="app-tagline">${app.tagline}</span>
+                </div>
+            </div>
+            <div class="app-card-actions">
+                ${landingHref ? `<a href="${landingHref}">Details</a>` : ""}
+                ${storeHref ? `<a href="${storeHref}" target="_blank" rel="noopener">App Store</a>` : ""}
+                ${!landingHref && !storeHref ? `<span class="app-coming-soon">Demnächst</span>` : ""}
+            </div>
+        </div>
+    </article>
+    `;
+};
+
+const renderApps = (apps, activeFilter = "Alle") => {
+    if (!gridRoot) return;
+
+    const filteredApps = activeFilter === "Alle"
+        ? apps
+        : apps.filter((app) => app.category === activeFilter);
+
+    gridRoot.innerHTML = filteredApps.map(createAppCard).join("");
+};
+
+const initPortfolio = async () => {
+    try {
+        const response = await fetch("Main/content/apps.json");
+        if (!response.ok) throw new Error("Portfolio konnte nicht geladen werden.");
+
+        const data = await response.json();
+        const apps = Array.isArray(data.apps) ? data.apps : [];
+
+        setMetrics(apps);
+        renderFeatured(apps);
+        renderCategories(apps);
+        renderApps(apps);
+        renderFilters(apps, (filter) => renderApps(apps, filter));
+    } catch (error) {
+        if (spotlightRoot) {
+            spotlightRoot.innerHTML = `
+                <article class="spotlight-card">
+                    <span class="spotlight-chip">Hinweis</span>
+                    <h3>Portfolio konnte nicht geladen werden</h3>
+                    <p>Bitte teste die Seite über den lokalen Webserver oder direkt über GitHub beziehungsweise Cloudflare Pages.</p>
+                </article>
+            `;
+        }
+
+        if (categoryRoot) {
+            categoryRoot.innerHTML = "";
+        }
+
+        if (gridRoot) {
+            gridRoot.innerHTML = `
+                <article class="app-card">
+                    <div class="app-card-shell">
+                        <div class="app-card-copy">
+                            <span class="app-chip">Fehler</span>
+                            <h3>Die App-Daten konnten nicht geladen werden.</h3>
+                            <p>Wenn du lokal testest, starte die Website bitte über LokalTesten.command oder den VS-Code-Debug-Server.</p>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+    }
+};
+
+initPortfolio();
