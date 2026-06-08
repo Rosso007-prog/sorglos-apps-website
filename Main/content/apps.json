@@ -255,6 +255,46 @@
       "storeDescription": "Imad Zipi hilft dir, deinen Tag klar und organisiert zu gestalten.\nPlane Termine, verwalte Projekte und behalte deine wichtigsten Aufgaben im Blick – alles an einem Ort.\n\nErstelle Events mit wenigen Fingertipps, passe sie flexibel an und synchronisiere sie später sicher über die Cloud."
     },
     {
+      "name": "BabySorglos",
+      "slug": "BabySorglos",
+      "category": "Familie",
+      "audience": "Eltern & Baby",
+      "tagline": "Alles Wichtige rund ums Baby – sorglos im Blick.",
+      "description": "Begleiter für die ersten Monate mit Baby: Schlaf, Mahlzeiten, Windeln und Entwicklung auf einen Blick.",
+      "icon": "apps/BabySorglos/AppIcon150x150.png",
+      "href": "apps/BabySorglos/index.html",
+      "appStoreUrl": "",
+      "badges": [
+        "Baby",
+        "Schlaf",
+        "Familie"
+      ],
+      "features": [
+        {
+          "titel": "Schlaf & Mahlzeiten",
+          "text": "Schlafzeiten und Mahlzeiten einfach erfassen und Muster erkennen."
+        },
+        {
+          "titel": "Entwicklung im Blick",
+          "text": "Meilensteine und Wachstum des Babys dokumentieren und feiern."
+        },
+        {
+          "titel": "Erinnerungen & Notizen",
+          "text": "Wichtige Momente und Arzttermine festhalten – alles an einem Ort."
+        }
+      ],
+      "featured": false,
+      "accent": "#ffb0d0",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ]
+    },
+    {
       "name": "Sorglos-Wachsen",
       "slug": "Sorglos-Wachsen",
       "category": "Familie",
