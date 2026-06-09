@@ -2,249 +2,274 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Startseite -->
+  <!-- ═══ Startseite ═══ -->
   <url>
     <loc>https://sorglos-apps.de/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Landingpages – Top 4 Apps -->
+  <!-- ═══ SEO-Landingpages – Top 4 Apps ═══ -->
   <url>
     <loc>https://sorglos-apps.de/apps/grilltimer/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/fd/50/0efd50a2-2629-2f73-d4ba-a290c7bff033/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg</image:loc>
-      <image:title>My Grill Timer-Sorglos App Icon</image:title>
+      <image:title>Grilltimer App Icon – My Grill Timer-Sorglos</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/pro-doku/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/58/ad/2158ad04-e444-cad8-28d0-ddf3a38bedef/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg</image:loc>
-      <image:title>Baudokumentation Pro Doku App Icon</image:title>
+      <image:title>Pro Doku App Icon – Baudokumentation</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/baby-echo/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/sortly-sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/11/2e/ca112e8a-fd82-628e-8b9c-cd8569132cbe/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg</image:loc>
-      <image:title>Sortly-Sorglos App Icon</image:title>
+      <image:title>Sortly-Sorglos App Icon – Inventarverwaltung</image:title>
     </image:image>
   </url>
 
-  <!-- App-Detailseiten -->
+  <!-- ═══ App-Detailseiten – Business ═══ -->
   <url>
     <loc>https://sorglos-apps.de/apps/My_Grill_Timer-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/Construction-Log/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/BabySorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/Sortly-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/neurobyte/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Eieruhr_Pro-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Gravity-Gloop/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/Buchhaltung-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/AboSorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/PassSafe-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
+    <loc>https://sorglos-apps.de/apps/Anything2ERP/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Imad-zipi/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ═══ App-Detailseiten – Familie ═══ -->
+  <url>
+    <loc>https://sorglos-apps.de/apps/BabySorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Sorglos-Wachsen/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Routine-Coach/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Schwangerschaft-Sorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ═══ App-Detailseiten – Lifestyle ═══ -->
+  <url>
+    <loc>https://sorglos-apps.de/apps/Eieruhr_Pro-Sorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://sorglos-apps.de/apps/Growmie-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/SpeedTest-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/FotoSafe-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Routine-Coach/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Sorglos-Wachsen/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/IdeaSpark/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/herzensworte/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/GedaechtnisProfi-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Mein_Einhorn-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Mein_Malbuch-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://sorglos-apps.de/apps/Schwangerschaft-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/RetroPulse/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/Recycling-Sorglos/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Leafy/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ═══ App-Detailseiten – Mind ═══ -->
+  <url>
+    <loc>https://sorglos-apps.de/apps/IdeaSpark/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/herzensworte/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/GedaechtnisProfi-Sorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/apps/ColorMood/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- ═══ App-Detailseiten – Play ═══ -->
+  <url>
+    <loc>https://sorglos-apps.de/apps/neurobyte/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://sorglos-apps.de/apps/Anything2ERP/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <loc>https://sorglos-apps.de/apps/Gravity-Gloop/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Mein_Einhorn-Sorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/Mein_Malbuch-Sorglos/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sorglos-apps.de/apps/growzilla/</loc>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Support & rechtliche Seiten -->
+  <!-- ═══ Support & rechtliche Seiten ═══ -->
   <url>
     <loc>https://sorglos-apps.de/Support/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/Main/Datenschutz1.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://sorglos-apps.de/Main/Impressum.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
