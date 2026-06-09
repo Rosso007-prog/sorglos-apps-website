@@ -1,5 +1,5 @@
-import { initializeDatabase } from "../lib/db.js";
-import { generateToken, createSignedCookie, storeSession } from "../lib/session.js";
+import { initializeDatabase } from "../../lib/db.js";
+import { generateToken, createSignedCookie, storeSession } from "../../lib/session.js";
 
 function absoluteUrl(request, path) {
   const url = new URL(request.url);
