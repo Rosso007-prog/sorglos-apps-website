@@ -30,7 +30,10 @@
       "Bash(curl -s -o /tmp/login_resp.txt -w '%{http_code}' --max-redirs 0 -X POST http://localhost:8788/admin/login/ -d 'username=admin&password=wrongpassword' -H 'Content-Type: application/x-www-form-urlencoded')",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8788/admin/login/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" --max-redirs 0 http://localhost:8788/admin/stats/)",
-      "Bash(curl -s -o /dev/null -w \"%{redirect_url}\" --max-redirs 0 http://localhost:8788/admin/stats/)"
+      "Bash(curl -s -o /dev/null -w \"%{redirect_url}\" --max-redirs 0 http://localhost:8788/admin/stats/)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}  →  %{redirect_url}' --max-redirs 0 http://localhost:8788/go/mwm-sortly-sorglos)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}  →  %{redirect_url}' --max-redirs 0 http://localhost:8788/admin/export/clicks)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}  →  %{redirect_url}' --max-redirs 0 http://localhost:8788/admin/export/pageviews)"
     ],
     "additionalDirectories": [
       "/Users/tobias/.claude/projects/-Users-tobias-Documents-GitHub-sorglos-apps-website",

@@ -15,6 +15,58 @@
         .faq-item { margin-bottom: 1.2rem; }
         .faq-item h3 { font-size: 1rem; margin-bottom: 0.4rem; }
         .faq-item p { color: var(--muted); margin: 0; font-size: 0.9rem; line-height: 1.6; }
+
+        /* MWM-Abschnitt */
+        .external-info {
+            margin-top: 3rem;
+            padding: 1.5rem 1.75rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.03);
+        }
+        .external-info-head {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .external-info-head h2 {
+            font-size: 1.1rem;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .ext-badge {
+            display: inline-block;
+            padding: 0.18rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(138,182,255,0.12);
+            color: var(--accent);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .external-info p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin: 0 0 1rem;
+        }
+        .ext-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(138,182,255,0.3);
+            padding-bottom: 0.1rem;
+            transition: border-color 180ms, opacity 180ms;
+        }
+        .ext-link:hover { opacity: 0.8; border-color: var(--accent); }
+        .ext-link svg { flex-shrink: 0; }
     </style>
 </head>
 <body>
@@ -128,6 +180,26 @@
             <div class="faq-item">
                 <h3>Funktioniert die App offline?</h3>
                 <p>Ja. Alle Kernfunktionen – Erfassen, Suchen, Protokollieren – laufen vollständig ohne Internetverbindung.</p>
+            </div>
+        </section>
+
+        <!-- Weitere Informationen – MWM -->
+        <section class="section" style="padding-top: 0;">
+            <div class="external-info">
+                <div class="external-info-head">
+                    <h2>Weitere Informationen</h2>
+                    <span class="ext-badge">Externe Analyse</span>
+                </div>
+                <p>
+                    Sortly Sorglos wurde zusätzlich von MWM analysiert und in deren App-Datenbank aufgenommen.
+                    Dort finden Besucher weitere Informationen, Screenshots und eine unabhängige Beschreibung der App.
+                </p>
+                <a class="ext-link" href="/go/mwm-sortly-sorglos" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                        <path d="M2 11L11 2M11 2H5M11 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Marktprofil bei MWM ansehen
+                </a>
             </div>
         </section>
 

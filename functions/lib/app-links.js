@@ -41,6 +41,7 @@ export const APP_LINKS = {
   "colormood": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
   "schwangerschaft": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
   "recycling": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
+  "mwm-sortly-sorglos": "https://mwm.ai/de/apps/sortly-sorglos/6738582535",
 };
 
 export function resolveAppLink(key) {
