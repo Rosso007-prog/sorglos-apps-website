@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Analytics Dashboard | Sorglos Apps</title>
+  <style>
+    :root {
+      --bg: #07111d;
+      --bg2: #030812;
+      --surface: rgba(12,21,34,0.85);
+      --surface2: rgba(16,27,43,0.94);
+      --border: rgba(255,255,255,0.09);
+      --border2: rgba(255,255,255,0.15);
+      --accent: #8ff4c8;
+      --accent-2: #8ab6ff;
+      --accent-3: #ffc785;
+      --text: #f3f7fd;
+      --muted: #a5b3c8;
+      --radius: 1rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(143,244,200,0.12), transparent 22%),
+        radial-gradient(circle at 86% 12%, rgba(138,182,255,0.12), transparent 20%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      color: var(--text);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Header ── */
+    .header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(4,9,17,0.7);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1280px; margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .brand { display: flex; align-items: center; gap: 0.7rem; }
+    .brand-mark {
+      width: 2.2rem; height: 2.2rem; border-radius: 0.7rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center;
+      font-weight: 800; color: #041019; font-size: 0.9rem;
+    }
+    .brand strong { font-size: 0.95rem; }
+    .brand span { font-size: 0.75rem; color: var(--muted); }
+    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .refresh-btn, .logout-btn {
+      padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+      border: 1px solid var(--border2); background: rgba(255,255,255,0.05);
+      color: var(--text); cursor: pointer; transition: all 180ms;
+    }
+    .logout-btn { color: var(--muted); }
+    .refresh-btn:hover, .logout-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.09); }
+
+    /* ── Layout ── */
+    .shell { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+    /* ── KPI Grid ── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    .kpi-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+    .kpi-value { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+    .kpi-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ── Charts ── */
+    .charts-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .chart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+    .chart-title { font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+    canvas { width: 100% !important; height: 160px !important; }
+
+    /* ── Tables Row ── */
+    .tables-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .table-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      backdrop-filter: blur(10px);
+    }
+    .table-title { font-size: 0.82rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th { text-align: left; color: var(--muted); font-size: 0.75rem; padding: 0 0 0.5rem; border-bottom: 1px solid var(--border); }
+    td { padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+    td:last-child { text-align: right; color: var(--accent); font-weight: 700; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Recent ── */
+    .recent-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .recent-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      backdrop-filter: blur(10px);
+    }
+    .recent-title { font-size: 0.82rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+    .recent-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+    .recent-table th { text-align: left; color: var(--muted); font-size: 0.72rem; padding: 0 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .recent-table td { padding: 0.45rem 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.03); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .recent-table tr:last-child td { border-bottom: none; }
+    .pill-app { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; background: rgba(143,244,200,0.12); color: var(--accent); font-size: 0.72rem; }
+    .pill-page { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; background: rgba(138,182,255,0.12); color: var(--accent-2); font-size: 0.72rem; }
+
+    /* ── Loading / Error ── */
+    .loading { text-align: center; padding: 4rem; color: var(--muted); }
+    .error-notice { background: rgba(255,107,122,0.1); border: 1px solid rgba(255,107,122,0.25); color: #ff8fa0; padding: 1rem 1.5rem; border-radius: var(--radius); margin-bottom: 1.5rem; font-size: 0.88rem; }
+
+    /* ── Bar chart (SVG) ── */
+    .bar-chart { width: 100%; }
+    .bar-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.55rem; font-size: 0.8rem; }
+    .bar-label { min-width: 7rem; max-width: 7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
+    .bar-track { flex: 1; height: 0.55rem; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+    .bar-count { min-width: 2.5rem; text-align: right; color: var(--muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .charts-row, .tables-row { grid-template-columns: 1fr; }
+      .recent-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div>
+          <strong>Sorglos Apps</strong>
+          <span>Analytics Dashboard</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="refresh-btn" onclick="loadStats()">Aktualisieren</button>
+        <a class="logout-btn" href="/admin/logout">Abmelden</a>
+        <a class="logout-btn" href="/">← Startseite</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <div id="error-notice" class="error-notice" style="display:none;"></div>
+    <div id="loading" class="loading">Daten werden geladen…</div>
+    <div id="dashboard" style="display:none;">
+
+      <!-- KPI -->
+      <div class="kpi-grid" id="kpi-grid"></div>
+
+      <!-- Line Charts -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-title">Klicks pro Tag (30 Tage)</div>
+          <canvas id="chart-clicks"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Seitenaufrufe pro Tag (30 Tage)</div>
+          <canvas id="chart-views"></canvas>
+        </div>
+      </div>
+
+      <!-- Bar Charts -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-title">Top Apps</div>
+          <div id="bar-apps" class="bar-chart"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Top Länder</div>
+          <div id="bar-countries" class="bar-chart"></div>
+        </div>
+      </div>
+
+      <!-- Tables -->
+      <div class="tables-row">
+        <div class="table-card">
+          <div class="table-title">Top Apps</div>
+          <table id="tbl-apps"><thead><tr><th>App</th><th>Klicks</th></tr></thead><tbody></tbody></table>
+        </div>
+        <div class="table-card">
+          <div class="table-title">Top Länder</div>
+          <table id="tbl-countries"><thead><tr><th>Land</th><th>Klicks</th></tr></thead><tbody></tbody></table>
+        </div>
+        <div class="table-card">
+          <div class="table-title">Top Seiten</div>
+          <table id="tbl-pages"><thead><tr><th>Seite</th><th>Aufrufe</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+
+      <!-- Recent -->
+      <div class="recent-row">
+        <div class="recent-card">
+          <div class="recent-title">Letzte Klicks</div>
+          <table class="recent-table" id="tbl-recent-clicks">
+            <thead><tr><th>Zeit</th><th>App</th><th>Land</th><th>Referer</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="recent-card">
+          <div class="recent-title">Letzte Seitenaufrufe</div>
+          <table class="recent-table" id="tbl-recent-views">
+            <thead><tr><th>Zeit</th><th>Seite</th><th>Land</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- /dashboard -->
+  </div>
+
+  <script>
+  function fmtDate(iso) {
+    if (!iso) return "–";
+    try {
+      const d = new Date(iso);
+      return d.toLocaleString("de-DE", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+    } catch { return iso.slice(0, 16).replace("T", " "); }
+  }
+
+  function escHtml(s) {
+    return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function renderKpi(data) {
+    const c = data.kpi.clicks;
+    const v = data.kpi.views;
+    const items = [
+      { label: "Klicks gesamt", value: c.total, sub: "" },
+      { label: "Klicks heute", value: c.today, sub: "" },
+      { label: "Klicks 7 Tage", value: c.week, sub: "" },
+      { label: "Klicks 30 Tage", value: c.month, sub: "" },
+      { label: "Aufrufe gesamt", value: v.total, sub: "" },
+      { label: "Aufrufe heute", value: v.today, sub: "" },
+      { label: "Aufrufe 7 Tage", value: v.week, sub: "" },
+      { label: "Aufrufe 30 Tage", value: v.month, sub: "" },
+    ];
+    document.getElementById("kpi-grid").innerHTML = items.map(i => `
+      <div class="kpi-card">
+        <div class="kpi-label">${i.label}</div>
+        <div class="kpi-value">${i.value.toLocaleString("de-DE")}</div>
+      </div>
+    `).join("");
+  }
+
+  function renderBars(containerId, rows, labelKey, countKey, color) {
+    const max = rows.length ? Math.max(...rows.map(r => r[countKey])) : 1;
+    document.getElementById(containerId).innerHTML = rows.slice(0, 8).map(r => `
+      <div class="bar-row">
+        <span class="bar-label" title="${escHtml(r[labelKey])}">${escHtml(r[labelKey])}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.round(r[countKey]/max*100)}%;${color ? 'background:'+color+';': ''}"></div></div>
+        <span class="bar-count">${r[countKey]}</span>
+      </div>
+    `).join("") || "<p style='color:var(--muted);font-size:0.85rem;'>Keine Daten</p>";
+  }
+
+  function renderTable(tableId, rows, cols) {
+    const tbody = document.querySelector(`#${tableId} tbody`);
+    tbody.innerHTML = rows.slice(0, 10).map(r =>
+      `<tr>${cols.map((c, i) => `<td>${escHtml(r[c] ?? "–")}</td>`).join("")}</tr>`
+    ).join("") || `<tr><td colspan="${cols.length}" style="color:var(--muted)">Keine Daten</td></tr>`;
+  }
+
+  function renderRecentClicks(rows) {
+    const tbody = document.querySelector("#tbl-recent-clicks tbody");
+    tbody.innerHTML = rows.map(r => `
+      <tr>
+        <td style="white-space:nowrap">${fmtDate(r.clicked_at)}</td>
+        <td><span class="pill-app">${escHtml(r.app)}</span></td>
+        <td>${escHtml(r.country || "–")}</td>
+        <td title="${escHtml(r.referer || "")}">${escHtml((r.referer || "–").replace(/^https?:\/\//, "").slice(0, 30))}</td>
+      </tr>
+    `).join("") || `<tr><td colspan="4" style="color:var(--muted)">Keine Daten</td></tr>`;
+  }
+
+  function renderRecentViews(rows) {
+    const tbody = document.querySelector("#tbl-recent-views tbody");
+    tbody.innerHTML = rows.map(r => `
+      <tr>
+        <td style="white-space:nowrap">${fmtDate(r.viewed_at)}</td>
+        <td><span class="pill-page">${escHtml(r.page)}</span></td>
+        <td>${escHtml(r.country || "–")}</td>
+      </tr>
+    `).join("") || `<tr><td colspan="3" style="color:var(--muted)">Keine Daten</td></tr>`;
+  }
+
+  // Minimal canvas line chart – no external libraries
+  function drawLineChart(canvasId, rows, dayKey, valueKey, color) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const dpr = window.devicePixelRatio || 1;
+    const W = canvas.offsetWidth || 500;
+    const H = 160;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr);
+
+    const PAD = { top: 12, right: 12, bottom: 28, left: 36 };
+    const w = W - PAD.left - PAD.right;
+    const h = H - PAD.top - PAD.bottom;
+
+    // Fill missing days in last 30 days
+    const today = new Date();
+    const days = [];
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      days.push(d.toISOString().slice(0, 10));
+    }
+    const map = {};
+    rows.forEach(r => { map[r[dayKey]] = r[valueKey]; });
+    const values = days.map(d => map[d] || 0);
+    const maxVal = Math.max(...values, 1);
+
+    // Grid lines
+    ctx.strokeStyle = "rgba(255,255,255,0.05)";
+    ctx.lineWidth = 1;
+    [0, 0.25, 0.5, 0.75, 1].forEach(frac => {
+      const y = PAD.top + h - frac * h;
+      ctx.beginPath(); ctx.moveTo(PAD.left, y); ctx.lineTo(PAD.left + w, y); ctx.stroke();
+      if (frac > 0) {
+        ctx.fillStyle = "rgba(165,179,200,0.6)";
+        ctx.font = "9px system-ui";
+        ctx.textAlign = "right";
+        ctx.fillText(Math.round(maxVal * frac), PAD.left - 4, y + 3);
+      }
+    });
+
+    // X-axis labels (every 7 days)
+    ctx.fillStyle = "rgba(165,179,200,0.6)";
+    ctx.font = "9px system-ui";
+    ctx.textAlign = "center";
+    days.forEach((d, i) => {
+      if (i % 7 === 0) {
+        const x = PAD.left + (i / (days.length - 1)) * w;
+        ctx.fillText(d.slice(5), x, H - 4);
+      }
+    });
+
+    // Area fill
+    const grad = ctx.createLinearGradient(0, PAD.top, 0, PAD.top + h);
+    grad.addColorStop(0, color + "40");
+    grad.addColorStop(1, color + "00");
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    values.forEach((v, i) => {
+      const x = PAD.left + (i / (days.length - 1)) * w;
+      const y = PAD.top + h - (v / maxVal) * h;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.lineTo(PAD.left + w, PAD.top + h);
+    ctx.lineTo(PAD.left, PAD.top + h);
+    ctx.closePath();
+    ctx.fill();
+
+    // Line
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    values.forEach((v, i) => {
+      const x = PAD.left + (i / (days.length - 1)) * w;
+      const y = PAD.top + h - (v / maxVal) * h;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+  }
+
+  async function loadStats() {
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("error-notice").style.display = "none";
+
+    try {
+      const res = await fetch("/api/stats");
+      if (res.status === 401) {
+        window.location.href = "/admin/login";
+        return;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      renderKpi(data);
+      drawLineChart("chart-clicks", data.clicksPerDay, "day", "clicks", "#8ff4c8");
+      drawLineChart("chart-views", data.viewsPerDay, "day", "views", "#8ab6ff");
+      renderBars("bar-apps", data.topApps, "app", "clicks", null);
+      renderBars("bar-countries", data.topCountries, "country", "clicks", "linear-gradient(90deg,#8ab6ff,#ffc785)");
+      renderTable("tbl-apps", data.topApps, ["app", "clicks"]);
+      renderTable("tbl-countries", data.topCountries, ["country", "clicks"]);
+      renderTable("tbl-pages", data.topPages, ["page", "views"]);
+      renderRecentClicks(data.recentClicks);
+      renderRecentViews(data.recentViews);
+
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+    } catch (err) {
+      document.getElementById("loading").style.display = "none";
+      const el = document.getElementById("error-notice");
+      el.textContent = `Fehler beim Laden der Daten: ${err.message}`;
+      el.style.display = "block";
+    }
+  }
+
+  loadStats();
+  </script>
+</body>
+</html>

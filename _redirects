@@ -1,0 +1,5 @@
+# Redirects for old landing page paths → clean URLs
+/apps/landing/grilltimer.html    /apps/grilltimer/    301
+/apps/landing/pro-doku.html      /apps/pro-doku/      301
+/apps/landing/baby-echo.html     /apps/baby-echo/     301
+/apps/landing/sortly-sorglos.html /apps/sortly-sorglos/ 301

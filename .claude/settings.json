@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(html|json|js|css|md|toml|conf|txt|command|py\\)$\")",
+      "Bash(mkdir -p /Users/tobias/.claude/projects/-Users-tobias-Documents-GitHub-sorglos-apps-website/memory && echo \"done\")",
+      "Bash(grep -iE \"^\\(grilltimer|pro-doku|baby-echo|sortly-sorglos\\)$\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(grep -h canonical __TRACKED_VAR__/apps/grilltimer/index.html __TRACKED_VAR__/apps/pro-doku/index.html __TRACKED_VAR__/apps/baby-echo/index.html __TRACKED_VAR__/apps/sortly-sorglos/index.html)",
+      "Bash(grep -rn ../../apps/ __TRACKED_VAR__/apps/grilltimer/ __TRACKED_VAR__/apps/pro-doku/ __TRACKED_VAR__/apps/baby-echo/ __TRACKED_VAR__/apps/sortly-sorglos/)",
+      "Bash(npx wrangler *)",
+      "Bash(echo \"pid=$!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8788/)",
+      "Bash(curl -sv http://localhost:8788/admin/login)",
+      "Bash(curl -sv http://localhost:8788/admin/login/)",
+      "Bash(curl -sv http://localhost:8788/admin/stats)",
+      "Bash(curl -s -D - http://localhost:8788/admin/login)",
+      "Bash(curl -s -D - http://localhost:8788/admin/login/)",
+      "Bash(curl -s http://localhost:8788/admin/stats)",
+      "Bash(node -e ' *)",
+      "Bash(pkill -f \"wrangler pages dev\")",
+      "Bash(npx wrangler pages dev . --d1=DB --port=8788 > /tmp/wrangler-test.log 2>&1 & *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -w '\\\\nHTTP %{http_code}' -X POST http://localhost:8788/api/track-pageview -H 'Content-Type: application/json' -d '{\"page\":\"/test-init\"}')",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code} → %{redirect_url}' --max-redirs 0 http://localhost:8788/go/eieruhr-pro)",
+      "Bash(curl -s -w \"\\\\nHTTP %{http_code}\" http://localhost:8788/api/stats)"
+    ],
+    "additionalDirectories": [
+      "/Users/tobias/.claude/projects/-Users-tobias-Documents-GitHub-sorglos-apps-website"
+    ]
+  }
+}

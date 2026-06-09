@@ -1,0 +1,13 @@
+{
+  "name": "sorglos-apps-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev . --d1=DB",
+    "build": "echo 'Static site – no build step required'",
+    "deploy": "wrangler pages deploy ."
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

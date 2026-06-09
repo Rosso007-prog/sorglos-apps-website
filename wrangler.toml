@@ -1,0 +1,9 @@
+name = "sorglos-apps-website"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sorglos_apps_tracking"
+database_id = "4cc48d34-bdf3-45a2-9e46-c723eff1bfe3"
+ 

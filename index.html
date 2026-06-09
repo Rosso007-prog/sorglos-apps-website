@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sorglos Apps entwickelt markante iOS-Apps für Business, Familie, Kreativität, Lifestyle und spielerische Erlebnisse.">
+    <meta name="description" content="Sorglos Apps entwickelt iOS-Apps für iPhone, iPad und Mac. Grilltimer, Pro Doku, Baby Echo, Sortly und mehr – direkt im Apple App Store.">
     <meta name="theme-color" content="#07111d">
-    <meta property="og:title" content="Sorglos Apps">
-    <meta property="og:description" content="Ein kuratiertes Portfolio aus iOS-Apps mit starker Identität, echtem Nutzen und eigenem Charakter.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sorglos Apps | iOS Apps für iPhone, iPad & Mac">
+    <meta property="og:description" content="Nützliche iOS-Apps für Business, Familie und Alltag. Jetzt im Apple App Store downloaden.">
     <meta property="og:type" content="website">
-    <title>Sorglos Apps | Starkes App-Portfolio für Alltag, Business und Ideen</title>
+    <meta property="og:url" content="https://sorglos-apps.de/">
+    <meta property="og:image" content="https://sorglos-apps.de/og-image.png">
+
+    <!-- SEO -->
+    <meta name="keywords" content="iOS Apps, iPhone Apps, iPad Apps, macOS Apps, App Store, Sorglos Apps, Grilltimer, Pro Doku, Baby App, Inventar App, Tobias Rossmann">
+    <link rel="canonical" href="https://sorglos-apps.de/">
+
+    <title>Sorglos Apps | iOS Apps für iPhone, iPad & Mac – direkt im App Store</title>
     <link rel="stylesheet" href="Main/styles/home.css">
 </head>
 <body>
@@ -21,7 +30,7 @@
                 <span class="brand-mark">S</span>
                 <span class="brand-copy">
                     <strong>Sorglos Apps</strong>
-                    <span>Apps mit Substanz, Charakter und echter Alltagstauglichkeit</span>
+                    <span>iOS Apps für iPhone, iPad & Mac</span>
                 </span>
             </a>
 
@@ -32,9 +41,9 @@
             </button>
 
             <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
-                <a href="#showcase">Showcase</a>
-                <a href="#collections">Kollektionen</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#top-apps">Top Apps</a>
+                <a href="#collections">Kategorien</a>
+                <a href="#portfolio">Alle Apps</a>
                 <a href="Support/index.html">Support</a>
                 <a href="Main/Datenschutz1.html">Datenschutz</a>
             </nav>
@@ -42,21 +51,21 @@
     </header>
 
     <main>
-        <section class="hero">
+        <!-- ═══ HERO ═══ -->
+        <section class="hero" id="top-apps">
             <div class="hero-copy">
                 <p class="eyebrow">iOS Apps von Tobias Rossmann</p>
                 <h1>Apps die den Alltag einfacher machen.</h1>
                 <p class="lead">
-                    Von smarter Buchhaltung über Pflanzenpflege bis hin zu kreativen Spielwelten –
-                    jede App löst ein echtes Problem oder bringt einen echten Moment Freude.
-                    Gemacht für iPhone, iPad und Mac, direkt im App Store erhältlich.
+                    Von smarter Baudokumentation über präzise Grilltimer bis hin zu Inventar-Management –
+                    jede App löst ein echtes Problem. Für iPhone, iPad und Mac, direkt im App Store.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#portfolio">Alle Apps ansehen</a>
-                    <a class="button button-secondary" href="Support/index.html">Support & Kontakt</a>
+                    <a class="button button-primary" href="/go/grilltimer" target="_blank" rel="noopener">Grilltimer laden</a>
+                    <a class="button button-secondary" href="#portfolio">Alle Apps ansehen</a>
                 </div>
                 <ul class="hero-notes">
-                    <li>27 Apps für Business, Familie, Lifestyle und mehr</li>
+                    <li>27+ Apps für Business, Familie, Lifestyle und mehr</li>
                     <li>Regelmäßige Updates und aktiver Support</li>
                     <li>Alle Apps direkt im Apple App Store verfügbar</li>
                 </ul>
@@ -64,28 +73,52 @@
 
             <div class="hero-stage" aria-label="Ausgewählte Apps im Spotlight">
                 <div class="stage-panel stage-panel-main">
-                    <p class="stage-kicker">Featured Selection</p>
-                    <div id="featured-spotlight" class="spotlight-grid">
-                        <article class="spotlight-card is-loading">
-                            <span class="spotlight-chip">Lädt</span>
-                            <h2>Portfolio wird geladen</h2>
-                            <p>Die kuratierte Auswahl wird gleich eingeblendet.</p>
-                        </article>
+                    <p class="stage-kicker">Direkt downloaden</p>
+                    <div class="above-fold-grid">
+                        <!-- Static above-the-fold cards – loaded instantly, no JS needed -->
+                        <a class="fold-card" href="/go/grilltimer" target="_blank" rel="noopener"
+                           style="--card-glow: rgba(255,158,109,0.25);">
+                            <span class="fold-chip">Lifestyle</span>
+                            <strong>Grilltimer</strong>
+                            <p>Mehrere Timer gleichzeitig – für entspanntes Grillen.</p>
+                            <span class="fold-store">↗ App Store</span>
+                        </a>
+                        <a class="fold-card" href="/go/pro-doku" target="_blank" rel="noopener"
+                           style="--card-glow: rgba(125,175,255,0.25);">
+                            <span class="fold-chip">Business</span>
+                            <strong>Pro Doku</strong>
+                            <p>Baudokumentation mit PDF-Export direkt vor Ort.</p>
+                            <span class="fold-store">↗ App Store</span>
+                        </a>
+                        <a class="fold-card" href="apps/BabySorglos/index.html"
+                           style="--card-glow: rgba(255,176,208,0.22);">
+                            <span class="fold-chip">Familie</span>
+                            <strong>Baby Echo</strong>
+                            <p>Schlaf, Mahlzeiten & Entwicklung des Babys im Blick.</p>
+                            <span class="fold-store">Details</span>
+                        </a>
+                        <a class="fold-card" href="/go/sortly-sorglos" target="_blank" rel="noopener"
+                           style="--card-glow: rgba(125,175,255,0.22);">
+                            <span class="fold-chip">Business</span>
+                            <strong>Sortly</strong>
+                            <p>Inventar, Bestände und Lagerorte übersichtlich organisieren.</p>
+                            <span class="fold-store">↗ App Store</span>
+                        </a>
                     </div>
                 </div>
                 <div class="stage-panel stage-panel-side">
                     <p class="stage-kicker">Studio Signal</p>
                     <div class="signal-grid">
                         <article>
-                            <strong id="metric-apps">0</strong>
+                            <strong id="metric-apps">27</strong>
                             <span>Apps im App Store</span>
                         </article>
                         <article>
-                            <strong id="metric-categories">0</strong>
+                            <strong id="metric-categories">5</strong>
                             <span>Kategorien</span>
                         </article>
                         <article>
-                            <strong id="metric-featured">0</strong>
+                            <strong id="metric-featured">6</strong>
                             <span>Top-Picks</span>
                         </article>
                     </div>
@@ -93,35 +126,36 @@
             </div>
         </section>
 
+        <!-- ═══ TRUST BAND ═══ -->
         <section class="trust-band" aria-label="App-Kategorien">
             <div class="trust-item">
                 <span>Business</span>
-                <strong>Buchhaltung, Inventar, Passwörter und mehr</strong>
+                <strong>Buchhaltung, Inventar, Baudoku, Passwörter</strong>
             </div>
             <div class="trust-item">
                 <span>Familie & Lifestyle</span>
-                <strong>Schwangerschaft, Pflanzen, Recycling und Kochen</strong>
+                <strong>Baby, Schwangerschaft, Pflanzen, Kochen</strong>
             </div>
             <div class="trust-item">
                 <span>Spiele & Kreativität</span>
-                <strong>Ausmalen, Einhörner, Quiz und Farming</strong>
+                <strong>Quiz, Farming, Ausmalen, Casual Games</strong>
             </div>
         </section>
 
+        <!-- ═══ SHOWCASE ═══ -->
         <section id="showcase" class="section section-showcase">
             <div class="section-head">
                 <p class="eyebrow">Über Sorglos Apps</p>
-                <h2>Apps mit echtem Nutzen – für jeden Tag.</h2>
+                <h2>iOS Apps mit echtem Nutzen – für jeden Tag.</h2>
                 <p>
-                    Sorglos Apps entwickelt iOS-Apps die im Alltag wirklich helfen.
-                    Jede App entsteht mit Fokus auf einfache Bedienung, klares Design und einen konkreten Mehrwert –
-                    ohne unnötige Komplexität.
+                    Sorglos Apps entwickelt iPhone- und iPad-Apps, die im Alltag wirklich helfen.
+                    Einfache Bedienung, klares Design, konkreter Mehrwert – ohne unnötige Komplexität.
                 </p>
             </div>
 
             <div class="showcase-grid">
                 <article class="showcase-card">
-                    <span class="showcase-label">Einfach zu bedienen</span>
+                    <span class="showcase-label">Sofort nutzbar</span>
                     <h3>Direkt loslegen, ohne Einarbeitung.</h3>
                     <p>Alle Apps sind intuitiv gestaltet – öffnen, verstehen, nutzen. Kein Handbuch nötig.</p>
                 </article>
@@ -133,11 +167,23 @@
                 <article class="showcase-card">
                     <span class="showcase-label">Support</span>
                     <h3>Direkter Kontakt bei Fragen.</h3>
-                    <p>Über die zentrale Support-Seite erreichst du uns schnell – mit klarer Rückmeldung statt Warteschleife.</p>
+                    <p>Über die Support-Seite erreichst du uns schnell – mit klarer Rückmeldung statt Warteschleife.</p>
                 </article>
             </div>
         </section>
 
+        <!-- ═══ FEATURED SPOTLIGHT (JS-rendered) ═══ -->
+        <section class="section section-featured-dynamic">
+            <div class="section-head">
+                <p class="eyebrow">Featured Selection</p>
+                <h2>Ausgewählte Apps aus dem Portfolio.</h2>
+            </div>
+            <div id="featured-spotlight" class="spotlight-grid">
+                <!-- populated by home.js -->
+            </div>
+        </section>
+
+        <!-- ═══ KATEGORIEN ═══ -->
         <section id="collections" class="section">
             <div class="section-head">
                 <p class="eyebrow">Kategorien</p>
@@ -145,34 +191,23 @@
                 <p>Von der Arbeit bis zur Freizeit – such dir den Bereich aus, der zu dir passt.</p>
             </div>
             <div id="category-grid" class="category-grid">
-                <article class="category-card">
-                    <span class="category-badge">Lädt</span>
-                    <h3>Kollektionen werden geladen</h3>
-                    <p>Die Kategorien werden auf Basis des Portfolios aufgebaut.</p>
-                </article>
+                <!-- populated by home.js -->
             </div>
         </section>
 
+        <!-- ═══ PORTFOLIO ═══ -->
         <section id="portfolio" class="section">
             <div class="section-head section-head-portfolio">
                 <div>
                     <p class="eyebrow">Portfolio</p>
-                    <h2>Alle Apps im Überblick.</h2>
-                    <p>Filtere nach Themenwelt und spring direkt in die passende App-Seite.</p>
+                    <h2>Alle iOS Apps im Überblick.</h2>
+                    <p>Filtere nach Themenwelt und springe direkt zur App im App Store.</p>
                 </div>
                 <div id="filter-bar" class="filter-bar" aria-label="Portfolio filtern"></div>
             </div>
 
             <div id="app-grid" class="app-grid">
-                <article class="app-card app-card-skeleton">
-                    <div class="app-card-shell">
-                        <div class="app-card-copy">
-                            <span class="app-chip">Lädt</span>
-                            <h3>Portfolio wird geladen</h3>
-                            <p>Die App-Karten erscheinen gleich automatisch.</p>
-                        </div>
-                    </div>
-                </article>
+                <!-- populated by home.js -->
             </div>
 
             <noscript>
@@ -180,6 +215,7 @@
             </noscript>
         </section>
 
+        <!-- ═══ PRINCIPLES ═══ -->
         <section class="section section-principles">
             <div class="section-head">
                 <p class="eyebrow">Warum Sorglos Apps</p>
@@ -193,7 +229,7 @@
                 </article>
                 <article class="principle-card">
                     <strong>02</strong>
-                    <h3>Gemacht für iPhone, iPad & Mac</h3>
+                    <h3>Für iPhone, iPad & Mac</h3>
                     <p>Alle Apps sind nativ für iOS entwickelt – optimiert für Touch, Geschwindigkeit und das Apple-Ökosystem.</p>
                 </article>
                 <article class="principle-card">
@@ -204,13 +240,28 @@
             </div>
         </section>
 
+        <!-- ═══ DATENSCHUTZHINWEIS ═══ -->
+        <section class="section privacy-notice-band">
+            <div class="privacy-notice-inner">
+                <span class="privacy-icon">🔒</span>
+                <p>
+                    <strong>Anonymisiertes Tracking:</strong>
+                    Wir erfassen anonymisierte Klicks auf App-Store-Links und Seitenaufrufe, um unsere Apps und Webseite zu verbessern.
+                    Es werden keine Werbeprofile erstellt und keine externen Trackingdienste verwendet.
+                    Normale Besucher erhalten keine Tracking-Cookies.
+                    <a href="Main/Datenschutz1.html">Datenschutzerklärung lesen →</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ═══ SUPPORT CTA ═══ -->
         <section id="support-band" class="section support-band">
             <div class="support-copy">
                 <p class="eyebrow">Support & Kontakt</p>
-                <h2>Frage zu einer App? Wir helfen direkt.</h2>
+                <h2>Frage zu einer iOS App? Wir helfen direkt.</h2>
                 <p>
                     Ob Fehler, Feedback oder eine einfache Frage – schreib uns über die Support-Seite.
-                    Wähle einfach die passende App aus und schick uns deine Nachricht.
+                    Wähle die passende App aus und schick uns deine Nachricht.
                 </p>
             </div>
             <div class="support-actions">
@@ -224,7 +275,7 @@
         <div class="footer-shell">
             <div>
                 <strong>Sorglos Apps</strong>
-                <p>iOS Apps für Alltag, Business und Freizeit – entwickelt von Tobias Rossmann.</p>
+                <p>iOS Apps für iPhone, iPad und Mac – entwickelt von Tobias Rossmann.</p>
             </div>
             <div class="footer-links">
                 <a href="Support/index.html">Support</a>

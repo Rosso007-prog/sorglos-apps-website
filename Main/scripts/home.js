@@ -82,15 +82,22 @@ const pickFeatured = (apps) => {
     return picked;
 };
 
+// Convert a slug to a /go/ tracking URL. Falls back to detail page if no store link.
+const goLink = (app) => {
+    if (app.appStoreUrl) return `/go/${encodeURIComponent(app.slug.toLowerCase().replace(/_/g, "-"))}`;
+    if (app.href && !app.href.startsWith("http")) return app.href;
+    return "#";
+};
+
 const renderFeatured = (apps) => {
     if (!spotlightRoot) return;
 
     const featured = pickFeatured(apps);
     spotlightRoot.innerHTML = featured.map((app) => {
-        const linkHref = (app.href && !app.href.startsWith("http")) ? app.href : (app.appStoreUrl || "#");
-        const target = app.appStoreUrl && app.href.startsWith("http") ? ' target="_blank" rel="noopener"' : "";
+        const href = goLink(app);
+        const target = app.appStoreUrl ? ' target="_blank" rel="noopener"' : "";
         return `
-        <a class="spotlight-card" href="${linkHref}"${target} style="--spotlight-glow:${app.accent || accentMap[app.category] || "rgba(143, 244, 200, 0.18)"};">
+        <a class="spotlight-card" href="${href}"${target} style="--spotlight-glow:${app.accent || accentMap[app.category] || "rgba(143, 244, 200, 0.18)"};">
             <span class="spotlight-chip">${app.category}</span>
             <h3>${app.name}</h3>
             <p>${app.tagline}</p>
@@ -156,13 +163,14 @@ const createAppCard = (app) => {
     const hasLandingPage = app.href && !app.href.startsWith("http");
     const landingHref = hasLandingPage ? app.href : null;
     const storeHref = app.appStoreUrl || null;
+    const trackingHref = storeHref ? goLink(app) : null;
     const iconSrc = getAppIcon(app);
 
     return `
     <article class="app-card">
         <div class="app-card-shell">
             <div class="app-card-top">
-                ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="">` : `<div class="app-icon-placeholder"></div>`}
+                ${iconSrc ? `<img class="app-icon" src="${iconSrc}" alt="${app.name} Icon" loading="lazy">` : `<div class="app-icon-placeholder"></div>`}
                 <div class="app-card-copy">
                     <div class="app-card-name-row">
                         <strong class="app-card-name">${app.name}</strong>
@@ -173,7 +181,7 @@ const createAppCard = (app) => {
             </div>
             <div class="app-card-actions">
                 ${landingHref ? `<a href="${landingHref}">Details</a>` : ""}
-                ${storeHref ? `<a href="${storeHref}" target="_blank" rel="noopener">App Store</a>` : ""}
+                ${trackingHref ? `<a href="${trackingHref}" target="_blank" rel="noopener">App Store</a>` : ""}
                 ${!landingHref && !storeHref ? `<span class="app-coming-soon">Demnächst</span>` : ""}
             </div>
         </div>
@@ -237,3 +245,15 @@ const initPortfolio = async () => {
 };
 
 initPortfolio();
+
+// Anonymous page view tracking – no cookies, no personal data
+(function trackPageView() {
+    try {
+        fetch("/api/track-pageview", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ page: window.location.pathname }),
+            keepalive: true,
+        }).catch(() => {});
+    } catch (_) {}
+})();

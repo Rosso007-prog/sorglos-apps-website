@@ -938,3 +938,117 @@ h3 {
         transition: none !important;
     }
 }
+
+/* ── Above-the-fold App Cards ─────────────────────────────── */
+.above-fold-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.fold-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(circle at top right, var(--card-glow, rgba(143,244,200,0.15)), transparent 55%),
+        rgba(255,255,255,0.03);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.fold-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-strong);
+}
+
+.fold-chip {
+    display: inline-block;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.07);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    width: fit-content;
+    margin-bottom: 0.15rem;
+}
+
+.fold-card strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.fold-card p {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.fold-store {
+    margin-top: auto;
+    padding-top: 0.6rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+/* ── Dynamic featured section ─────────────────────────────── */
+.section-featured-dynamic .spotlight-grid {
+    margin-top: 0;
+}
+
+/* ── Privacy Notice Band ──────────────────────────────────── */
+.privacy-notice-band {
+    padding-top: 2rem !important;
+    padding-bottom: 0 !important;
+}
+
+.privacy-notice-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1.1rem 1.5rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.privacy-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.privacy-notice-inner a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .above-fold-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+    .fold-card {
+        padding: 0.75rem 0.85rem;
+    }
+    .fold-card p {
+        display: none;
+    }
+}

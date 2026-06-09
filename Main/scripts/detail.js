@@ -45,8 +45,9 @@
         // Datenschutz path
         const datenschutzHref = `Datenschutz/Datenschutz.html`;
 
+        const goSlug = (app.slug || "").toLowerCase().replace(/_/g, "-");
         const storeBtn = app.appStoreUrl
-            ? `<a class="button button-primary" href="${app.appStoreUrl}" target="_blank" rel="noopener">Im App Store</a>`
+            ? `<a class="button button-primary" href="/go/${encodeURIComponent(goSlug)}" target="_blank" rel="noopener">Im App Store</a>`
             : `<span class="button button-primary button-disabled">Demnächst verfügbar</span>`;
 
         // Features
@@ -218,6 +219,16 @@
         document.getElementById("detail-root").innerHTML =
             `<section class="section"><p style="color:var(--muted)">${msg}</p></section>`;
     }
+
+    // Anonymous page view tracking
+    try {
+        fetch("/api/track-pageview", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ page: window.location.pathname }),
+            keepalive: true,
+        }).catch(() => {});
+    } catch (_) {}
 
     // Shift hue slightly for accent-2
     function shiftAccent(hex) {
