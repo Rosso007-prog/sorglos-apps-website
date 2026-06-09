@@ -15,9 +15,11 @@
     <meta property="og:description" content="Nützliche iOS-Apps für Business, Familie und Alltag. Jetzt im Apple App Store downloaden.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sorglos-apps.de/">
-    <meta property="og:image" content="https://sorglos-apps.de/og-image.png">
+    <meta property="og:image" content="https://sorglos-apps.de/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sorglos Apps – iOS Apps für iPhone, iPad und Mac">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Sorglos Apps">
 
@@ -25,11 +27,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sorglos Apps | iOS Apps für iPhone, iPad & Mac">
     <meta name="twitter:description" content="Nützliche iOS-Apps für Business, Familie und Alltag. Jetzt im Apple App Store downloaden.">
-    <meta name="twitter:image" content="https://sorglos-apps.de/og-image.png">
+    <meta name="twitter:image" content="https://sorglos-apps.de/og-image.svg">
 
     <!-- SEO -->
     <meta name="keywords" content="iOS Apps, iPhone Apps, iPad Apps, macOS Apps, App Store, Sorglos Apps, Grilltimer, Pro Doku, Baby App, Inventar App, Tobias Rossmann">
     <link rel="canonical" href="https://sorglos-apps.de/">
+    <link rel="alternate" hreflang="de" href="https://sorglos-apps.de/">
+    <link rel="alternate" hreflang="x-default" href="https://sorglos-apps.de/">
 
     <!-- Schema.org: WebSite + Organization -->
     <script type="application/ld+json">
@@ -101,6 +105,47 @@
     </script>
 
     <title>Sorglos Apps | iOS Apps für iPhone, iPad & Mac – direkt im App Store</title>
+
+    <!-- Critical CSS inline – verhindert FOUC für Header + Hero -->
+    <style>
+      :root{--bg:#07111d;--bg-deep:#030812;--surface:rgba(12,21,34,.8);--border:rgba(255,255,255,.09);--border-strong:rgba(255,255,255,.16);--text:#f3f7fd;--muted:#a5b3c8;--accent:#8ff4c8;--accent-2:#8ab6ff;--accent-3:#ffc785;--content:1240px;--radius-xl:2rem;--transition:220ms ease}
+      *,*::before,*::after{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{margin:0;min-height:100vh;font-family:"Sora","Avenir Next","Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 18%,rgba(143,244,200,.18),transparent 22%),radial-gradient(circle at 86% 14%,rgba(138,182,255,.16),transparent 20%),radial-gradient(circle at 50% 82%,rgba(255,199,133,.09),transparent 22%),linear-gradient(180deg,var(--bg),var(--bg-deep))}
+      a{color:inherit;text-decoration:none}
+      img{display:block;max-width:100%}
+      button,input,select,textarea{font:inherit}
+      h1,h2,h3{margin:0;line-height:1.02;letter-spacing:-.045em}
+      h1{max-width:9.5ch;font-size:clamp(3rem,7vw,6.1rem)}
+      h2{font-size:clamp(2rem,4vw,3.5rem)}
+      h3{font-size:1.25rem}
+      .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(4,9,17,.66);border-bottom:1px solid rgba(255,255,255,.06)}
+      .nav-shell{width:min(calc(100% - 2rem),var(--content));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+      .brand{display:inline-flex;align-items:center;gap:.9rem;min-width:0}
+      .brand-mark{display:grid;place-items:center;width:2.85rem;height:2.85rem;border-radius:.95rem;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#041019;font-weight:800}
+      .brand-copy{display:flex;flex-direction:column;gap:.15rem}
+      .brand-copy strong{font-size:1rem}
+      .brand-copy span{color:var(--muted)}
+      .site-nav{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+      .site-nav a{padding:.8rem 1rem;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid transparent}
+      .menu-toggle{display:none;width:3rem;height:3rem;padding:.7rem;border:1px solid var(--border);border-radius:1rem;background:rgba(255,255,255,.04)}
+      main{width:min(calc(100% - 2rem),var(--content));margin:0 auto}
+      .hero{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(340px,.96fr);gap:2rem;align-items:center;padding:5rem 0 2rem}
+      .eyebrow{margin:0 0 1rem;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:700}
+      .lead{margin-top:1.45rem;max-width:60ch;line-height:1.78;font-size:1.06rem;color:var(--muted)}
+      .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+      .button{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:.92rem 1.35rem;border-radius:999px;border:1px solid transparent;font-weight:700}
+      .button-primary{color:#041019;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 18px 42px rgba(138,182,255,.22)}
+      .button-secondary{background:rgba(255,255,255,.045);border-color:var(--border)}
+      .page-glow{position:fixed;z-index:-2;width:34rem;height:34rem;border-radius:999px;filter:blur(80px);opacity:.4;pointer-events:none}
+      .page-glow-left{top:-10rem;left:-10rem;background:rgba(143,244,200,.26)}
+      .page-glow-right{top:10rem;right:-12rem;background:rgba(138,182,255,.24)}
+      @media(max-width:640px){.hero{grid-template-columns:1fr;padding-top:3rem}.hero-stage{display:none}.menu-toggle{display:inline-flex}.site-nav{position:absolute;top:calc(100% + .5rem);right:.6rem;left:.6rem;flex-direction:column;padding:.75rem;border-radius:1.2rem;background:rgba(7,14,24,.97);border:1px solid var(--border);visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity 180ms,transform 180ms,visibility 0s linear 180ms}.site-nav.is-open{visibility:visible;opacity:1;pointer-events:all;transform:translateY(0);transition:opacity 180ms,transform 180ms,visibility 0s}}
+    </style>
+
+    <!-- Full stylesheet (non-blocking für Below-the-fold) -->
+    <link rel="preload" href="Main/styles/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="Main/styles/home.css"></noscript>
     <link rel="stylesheet" href="Main/styles/home.css">
 </head>
 <body>

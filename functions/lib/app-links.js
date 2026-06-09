@@ -42,6 +42,8 @@ export const APP_LINKS = {
   "schwangerschaft": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
   "recycling": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
   "mwm-sortly-sorglos": "https://mwm.ai/de/apps/sortly-sorglos/6738582535",
+  "appbrain-grilltimer": "https://www.appbrain.com/appstore/my-grill-timer-sorglos/ios-6670444680",
+  "apkpure-grilltimer": "https://iphone.apkpure.com/app/my-grill-timer-sorglos/sorglosloack.steakgrilltimer",
 };
 
 export function resolveAppLink(key) {

@@ -23,6 +23,8 @@
     <meta name="twitter:image" content="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/fd/50/0efd50a2-2629-2f73-d4ba-a290c7bff033/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg">
 
     <link rel="canonical" href="https://sorglos-apps.de/apps/grilltimer/">
+    <link rel="alternate" hreflang="de" href="https://sorglos-apps.de/apps/grilltimer/">
+    <link rel="alternate" hreflang="x-default" href="https://sorglos-apps.de/apps/grilltimer/">
     <title>Grilltimer – iOS Grill-Timer App für iPhone & iPad | Sorglos Apps</title>
 
     <script type="application/ld+json">
@@ -106,12 +108,72 @@
       ]
     }
     </script>
+    <style>:root{--bg-start:#0a1322;--bg-end:#07101b;--border:rgba(255,255,255,.1);--text:#f3f7fb;--muted:#b6c2d3;--accent:#6ee7c8;--accent-2:#7dafff;--content:1160px}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at top left,color-mix(in srgb,var(--accent-2) 22%,transparent),transparent 26%),radial-gradient(circle at 85% 15%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 22%),linear-gradient(180deg,var(--bg-start),var(--bg-end))}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.03em}h1{font-size:clamp(2.5rem,6vw,4.8rem);max-width:10ch}h2{font-size:clamp(1.8rem,4vw,3rem)}.shell{width:min(calc(100% - 2rem),var(--content));margin:0 auto}.topbar{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);background:rgba(7,16,27,.72);border-bottom:1px solid rgba(255,255,255,.08)}.topbar .shell{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}.brand{display:inline-flex;align-items:center;gap:.8rem}.brand-mark{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.85rem;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#06101a;font-weight:800}.brand-copy{display:flex;flex-direction:column;gap:.12rem}.brand-copy strong{font-size:1rem}.brand-copy span,.hero-copy p{color:var(--muted)}.topnav{display:flex;flex-wrap:wrap;gap:.6rem}.topnav a{padding:.8rem 1rem;border-radius:999px;background:rgba(255,255,255,.04)}.hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:2rem;align-items:center;padding:4.5rem 0 2rem}.eyebrow{margin:0 0 1rem;color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem}.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.5rem}.button{display:inline-flex;align-items:center;justify-content:center;min-height:3.1rem;padding:.85rem 1.3rem;border-radius:999px;border:1px solid transparent;font-weight:700}.button-primary{color:#041019;background:linear-gradient(135deg,var(--accent),var(--accent-2))}.button-secondary{background:rgba(255,255,255,.045);border-color:var(--border)}@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:2.5rem}.hero-card{display:none}.topnav{display:none}}</style>
+    <link rel="preload" href="../../Main/styles/app-pages.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../Main/styles/app-pages.css"></noscript>
     <link rel="stylesheet" href="../../Main/styles/app-pages.css">
     <style>
         body { --accent: #ff9e6d; --accent-2: #ffd166; }
         .faq-item { margin-bottom: 1.2rem; }
         .faq-item h3 { font-size: 1rem; margin-bottom: 0.4rem; }
         .faq-item p { color: var(--muted); margin: 0; font-size: 0.9rem; line-height: 1.6; }
+
+        /* Abschnitt externe App-Profile */
+        .external-info {
+            margin-top: 3rem;
+            padding: 1.5rem 1.75rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.03);
+        }
+        .external-info-head {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .external-info-head h2 {
+            font-size: 1.1rem;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .ext-badge {
+            display: inline-block;
+            padding: 0.18rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(255,158,109,0.12);
+            color: var(--accent);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .external-info > p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin: 0 0 1rem;
+        }
+        .ext-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .ext-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,158,109,0.3);
+            padding-bottom: 0.1rem;
+            width: fit-content;
+            transition: border-color 180ms, opacity 180ms;
+        }
+        .ext-link:hover { opacity: 0.8; border-color: var(--accent); }
     </style>
 </head>
 <body>
@@ -225,6 +287,34 @@
             <div class="faq-item">
                 <h3>Kann ich eigene Garzeiten eintragen?</h3>
                 <p>Die App enthält voreingestellte Garzeiten. Details zu individuellen Eingaben findest du nach dem Download in der App selbst.</p>
+            </div>
+        </section>
+
+        <!-- Weitere Informationen – externe App-Profile -->
+        <section class="section" style="padding-top: 0;">
+            <div class="external-info">
+                <div class="external-info-head">
+                    <h2>Weitere Informationen</h2>
+                    <span class="ext-badge">Externe App-Profile</span>
+                </div>
+                <p>
+                    My Grill Timer – Sorglos ist zusätzlich in externen App-Verzeichnissen gelistet.
+                    Dort finden Besucher weitere Informationen, Screenshots und App-Details.
+                </p>
+                <div class="ext-links">
+                    <a class="ext-link" href="/go/appbrain-grilltimer" target="_blank" rel="noopener noreferrer">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                            <path d="M2 11L11 2M11 2H5M11 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        App-Profil bei AppBrain ansehen
+                    </a>
+                    <a class="ext-link" href="/go/apkpure-grilltimer" target="_blank" rel="noopener noreferrer">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                            <path d="M2 11L11 2M11 2H5M11 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        App-Verzeichnis bei APKPure ansehen
+                    </a>
+                </div>
             </div>
         </section>
 

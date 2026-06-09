@@ -31,10 +31,15 @@
         document.body.style.setProperty("--accent", app.accent || "#6ee7c8");
         document.body.style.setProperty("--accent-2", shiftAccent(app.accent));
 
-        // <title> & meta
-        document.title = `${app.name} | Sorglos Apps`;
+        // <title> & meta description
+        document.title = `${app.name} – iOS App für iPhone & iPad | Sorglos Apps`;
         const metaDesc = document.querySelector("meta[name='description']");
-        if (metaDesc) metaDesc.setAttribute("content", app.description);
+        if (metaDesc) metaDesc.setAttribute("content",
+            `${app.tagline} – ${app.description} Jetzt im Apple App Store.`
+        );
+
+        // Inject / update all SEO meta tags dynamically
+        injectMeta(app);
 
         // Prefer live App Store icon, fall back to local file
         // app.icon is relative to root (e.g. apps/Slug/AppIcon.png), page is at apps/Slug/
@@ -218,6 +223,135 @@
     function showError(msg) {
         document.getElementById("detail-root").innerHTML =
             `<section class="section"><p style="color:var(--muted)">${msg}</p></section>`;
+    }
+
+    function setMeta(name, content, attr = "name") {
+        if (!content) return;
+        let el = document.querySelector(`meta[${attr}="${name}"]`);
+        if (!el) {
+            el = document.createElement("meta");
+            el.setAttribute(attr, name);
+            document.head.appendChild(el);
+        }
+        el.setAttribute("content", content);
+    }
+
+    function setLink(rel, href, extra = {}) {
+        let el = document.querySelector(`link[rel="${rel}"]`);
+        if (!el) {
+            el = document.createElement("link");
+            el.setAttribute("rel", rel);
+            document.head.appendChild(el);
+        }
+        el.setAttribute("href", href);
+        Object.entries(extra).forEach(([k, v]) => el.setAttribute(k, v));
+    }
+
+    function injectMeta(app) {
+        const origin = "https://sorglos-apps.de";
+        const pageUrl = `${origin}${window.location.pathname}`;
+        const iconUrl = app.storeIcon || (app.icon ? `${origin}/${app.icon}` : "");
+        const goSlug  = (app.slug || "").toLowerCase().replace(/_/g, "-");
+        const desc    = `${app.tagline} – ${app.description} Jetzt im Apple App Store.`;
+
+        // robots
+        setMeta("robots", "index,follow");
+        setMeta("author", "Tobias Rossmann");
+
+        // Open Graph
+        setMeta("og:title",       `${app.name} – iOS App | Sorglos Apps`, "property");
+        setMeta("og:description", desc, "property");
+        setMeta("og:type",        "website", "property");
+        setMeta("og:url",         pageUrl, "property");
+        setMeta("og:locale",      "de_DE", "property");
+        setMeta("og:site_name",   "Sorglos Apps", "property");
+        if (iconUrl) {
+            setMeta("og:image",   iconUrl, "property");
+            setMeta("og:image:alt", `${app.name} App Icon`, "property");
+        }
+
+        // Twitter Card
+        setMeta("twitter:card",        "summary");
+        setMeta("twitter:title",       `${app.name} – iOS App | Sorglos Apps`);
+        setMeta("twitter:description", desc);
+        if (iconUrl) setMeta("twitter:image", iconUrl);
+
+        // Canonical + hreflang
+        setLink("canonical", pageUrl);
+        setLink("alternate", pageUrl, { hreflang: "de" });
+
+        // Schema.org JSON-LD
+        injectSchema(app, pageUrl, iconUrl, goSlug);
+    }
+
+    function injectSchema(app, pageUrl, iconUrl, goSlug) {
+        // Remove any existing injected schema
+        document.querySelectorAll('script[type="application/ld+json"][data-detail]')
+            .forEach(s => s.remove());
+
+        const categoryMap = {
+            Business: "BusinessApplication",
+            Familie:  "HealthAndFitnessApplication",
+            Lifestyle: "LifestyleApplication",
+            Mind:     "EducationApplication",
+            Play:     "GameApplication",
+        };
+        const appCategory = categoryMap[app.category] || "MobileApplication";
+        const origin      = "https://sorglos-apps.de";
+
+        const graph = [
+            {
+                "@type": "MobileApplication",
+                "@id":   `${pageUrl}#app`,
+                "name":  app.name,
+                "description": app.storeDescription || app.description,
+                "url":   pageUrl,
+                "applicationCategory": appCategory,
+                "operatingSystem": "iOS",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+                "author": {
+                    "@type": "Organization",
+                    "name":  "Sorglos Apps",
+                    "url":   origin + "/"
+                },
+                ...(app.appStoreUrl ? { "downloadUrl": app.appStoreUrl } : {}),
+                ...(iconUrl ? { "image": iconUrl } : {}),
+                "inLanguage": "de",
+                ...(app.features ? {
+                    "featureList": app.features.map(f => f.titel)
+                } : {}),
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Sorglos Apps", "item": origin + "/" },
+                    { "@type": "ListItem", "position": 2, "name": app.category, "item": `${origin}/#${app.category.toLowerCase()}` },
+                    { "@type": "ListItem", "position": 3, "name": app.name, "item": pageUrl },
+                ]
+            }
+        ];
+
+        // Add FAQPage if features can be repurposed (only when 2+ features exist)
+        if (app.features && app.features.length >= 2) {
+            graph.push({
+                "@type": "FAQPage",
+                "@id": `${pageUrl}#faq`,
+                "mainEntity": app.features.map(f => ({
+                    "@type": "Question",
+                    "name": `Was kann die Funktion "${f.titel}" in ${app.name}?`,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": f.text
+                    }
+                }))
+            });
+        }
+
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.dataset.detail = "1";
+        script.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+        document.head.appendChild(script);
     }
 
     // Anonymous page view tracking
