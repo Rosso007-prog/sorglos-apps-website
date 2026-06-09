@@ -420,7 +420,7 @@
     try {
       const res = await fetch("/api/stats");
       if (res.status === 401) {
-        window.location.href = "/admin/login";
+        window.location.href = "/admin/login/";
         return;
       }
       if (!res.ok) throw new Error(`HTTP ${res.status}`);

@@ -31,7 +31,7 @@ export async function createSignedCookie(token, secret) {
   const sig = await hmacSign(secret, token);
   const value = `${token}.${sig}`;
   const expires = new Date(Date.now() + SESSION_DURATION_MS).toUTCString();
-  return `${COOKIE_NAME}=${value}; HttpOnly; Secure; SameSite=Lax; Path=/admin; Expires=${expires}`;
+  return `${COOKIE_NAME}=${value}; HttpOnly; Secure; SameSite=Lax; Path=/; Expires=${expires}`;
 }
 
 export async function verifySessionCookie(request, secret) {
@@ -47,7 +47,7 @@ export async function verifySessionCookie(request, secret) {
 }
 
 export function clearSessionCookie() {
-  return `${COOKIE_NAME}=; HttpOnly; Secure; SameSite=Lax; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+  return `${COOKIE_NAME}=; HttpOnly; Secure; SameSite=Lax; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT`;
 }
 
 export async function isValidSession(db, token) {
