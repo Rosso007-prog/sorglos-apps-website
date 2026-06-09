@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Admin-Bereich nicht indexieren
+Disallow: /admin/
+Disallow: /admin/login/
+Disallow: /admin/stats/
+Disallow: /admin/export/
+Disallow: /admin/debug-env
+
+# Interne Weiterleitungs-Routen nicht indexieren
+Disallow: /go/
+
+# Support-Live-Event-Daten nicht indexieren
+Disallow: /Support/live_event/Data/
+
+Sitemap: https://sorglos-apps.de/sitemap.xml

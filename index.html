@@ -6,16 +6,99 @@
     <meta name="description" content="Sorglos Apps entwickelt iOS-Apps für iPhone, iPad und Mac. Grilltimer, Pro Doku, Baby Echo, Sortly und mehr – direkt im Apple App Store.">
     <meta name="theme-color" content="#07111d">
 
+    <!-- Indexierung -->
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Tobias Rossmann">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Sorglos Apps | iOS Apps für iPhone, iPad & Mac">
     <meta property="og:description" content="Nützliche iOS-Apps für Business, Familie und Alltag. Jetzt im Apple App Store downloaden.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sorglos-apps.de/">
     <meta property="og:image" content="https://sorglos-apps.de/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Sorglos Apps">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sorglos Apps | iOS Apps für iPhone, iPad & Mac">
+    <meta name="twitter:description" content="Nützliche iOS-Apps für Business, Familie und Alltag. Jetzt im Apple App Store downloaden.">
+    <meta name="twitter:image" content="https://sorglos-apps.de/og-image.png">
 
     <!-- SEO -->
     <meta name="keywords" content="iOS Apps, iPhone Apps, iPad Apps, macOS Apps, App Store, Sorglos Apps, Grilltimer, Pro Doku, Baby App, Inventar App, Tobias Rossmann">
     <link rel="canonical" href="https://sorglos-apps.de/">
+
+    <!-- Schema.org: WebSite + Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://sorglos-apps.de/#website",
+          "url": "https://sorglos-apps.de/",
+          "name": "Sorglos Apps",
+          "description": "iOS Apps für iPhone, iPad und Mac – entwickelt von Tobias Rossmann",
+          "inLanguage": "de",
+          "publisher": { "@id": "https://sorglos-apps.de/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://sorglos-apps.de/#organization",
+          "name": "Sorglos Apps",
+          "url": "https://sorglos-apps.de/",
+          "email": "sorgloslack@gmail.com",
+          "description": "Entwickler von iOS-Apps für Alltag, Business und Freizeit.",
+          "sameAs": [
+            "https://apps.apple.com/de/developer/tobias-rossmann/id1234567890"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://sorglos-apps.de/#webpage",
+          "url": "https://sorglos-apps.de/",
+          "name": "Sorglos Apps | iOS Apps für iPhone, iPad & Mac – direkt im App Store",
+          "isPartOf": { "@id": "https://sorglos-apps.de/#website" },
+          "about": { "@id": "https://sorglos-apps.de/#organization" },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "ItemList",
+          "name": "Sorglos Apps Portfolio",
+          "description": "Alle iOS-Apps von Sorglos Apps im App Store",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Grilltimer",
+              "url": "https://sorglos-apps.de/apps/grilltimer/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Baudokumentation Pro Doku",
+              "url": "https://sorglos-apps.de/apps/pro-doku/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Baby Echo",
+              "url": "https://sorglos-apps.de/apps/baby-echo/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Sortly-Sorglos",
+              "url": "https://sorglos-apps.de/apps/sortly-sorglos/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <title>Sorglos Apps | iOS Apps für iPhone, iPad & Mac – direkt im App Store</title>
     <link rel="stylesheet" href="Main/styles/home.css">
