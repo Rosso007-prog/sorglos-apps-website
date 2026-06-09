@@ -291,7 +291,8 @@
         "3.png",
         "4.png",
         "5.png",
-        "6.png"
+        "6.png",
+        "7.png"
       ]
     },
     {
@@ -965,6 +966,47 @@
       "accent": "#ffbf73",
       "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/5a/53/7b5a53ac-87b9-1396-01ce-c0e523f09096/AppIcon-0-0-1x_U007epad-0-85-220.png/512x512bb.jpg",
       "storeDescription": "Mein Malbuch - Sorglos ist die perfekte App für Kinder zwischen 4 und 10 Jahren, um ihrer Kreativität freien Lauf zu lassen. Unsere App bietet eine Vielzahl von liebevoll gestalteten Ausmalbildern in unterschiedlichen Kategorien, wie Tiere, Natur, Märchen und Fahrzeuge."
+    },
+    {
+      "name": "RetroPulse",
+      "slug": "RetroPulse",
+      "category": "Lifestyle",
+      "audience": "Motorrad & Fahrzeug-Fans",
+      "tagline": "Geschwindigkeit und Drehzahl im Retro-Dashboard-Stil.",
+      "description": "Für Motorrad-, Moped- und Oldtimer-Enthusiasten, die einen visuell ansprechenden Begleiter für ihre Ausfahrten suchen.",
+      "icon": "apps/RetroPulse/AppIcon150x150.png",
+      "href": "apps/RetroPulse/index.html",
+      "appStoreUrl": "",
+      "badges": [
+        "Motorrad",
+        "GPS",
+        "Retro"
+      ],
+      "features": [
+        {
+          "titel": "Retro-Dashboard",
+          "text": "Geschwindigkeit und Drehzahl in einem klassischen Vintage-Design – direkt auf deinem iPhone."
+        },
+        {
+          "titel": "GPS-Geschwindigkeit",
+          "text": "Echtzeit-Geschwindigkeitsanzeige auf Basis von GPS – ohne Anmeldung oder Cloud."
+        },
+        {
+          "titel": "Drehzahl-Schätzung",
+          "text": "Motorgeräusch und Vibration werden lokal analysiert, um eine RPM-Schätzung anzuzeigen."
+        },
+        {
+          "titel": "Statistik & Sessions",
+          "text": "Vergangene Fahrten werden lokal gespeichert und sind jederzeit abrufbar."
+        }
+      ],
+      "featured": false,
+      "accent": "rgba(255, 160, 80, 0.2)",
+      "screenshots": [
+        "1.png",
+        "2.png",
+        "3.png"
+      ]
     }
   ]
 }
