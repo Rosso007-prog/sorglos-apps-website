@@ -3,3 +3,6 @@
 /apps/landing/pro-doku.html      /apps/pro-doku/      301
 /apps/landing/baby-echo.html     /apps/baby-echo/     301
 /apps/landing/sortly-sorglos.html /apps/sortly-sorglos/ 301
+
+# Kurz-URL für Pro-Doku
+/prodoku                         /apps/pro-doku/       301
