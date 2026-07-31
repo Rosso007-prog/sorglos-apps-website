@@ -3,12 +3,12 @@ export const APP_LINKS = {
   "my-grill-timer": "https://apps.apple.com/de/app/my-grill-timer-sorglos/id6670444680",
   "pro-doku": "https://apps.apple.com/de/app/baudokumentation-pro-doku/id6754005836",
   "baudokumentation": "https://apps.apple.com/de/app/baudokumentation-pro-doku/id6754005836",
-  "baby-echo": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
-  "babysorglos": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
+  "baby-echo": "https://apps.apple.com/de/app/babysorglos/id6754441249",
+  "babysorglos": "https://apps.apple.com/de/app/babysorglos/id6754441249",
   "sortly-sorglos": "https://apps.apple.com/de/app/sortly-sorglos/id6738582535",
   "sortly": "https://apps.apple.com/de/app/sortly-sorglos/id6738582535",
-  "retro-pulse": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
-  "retropulse": null, // TODO: App Store link fehlt – sobald verfügbar ergänzen
+  "retro-pulse": "https://apps.apple.com/de/app/retropulse/id6774341541",
+  "retropulse": "https://apps.apple.com/de/app/retropulse/id6774341541",
   "neurobyte": "https://apps.apple.com/de/app/neurobyte-wissen-vs-ki/id6744259967",
   "eieruhr-pro": "https://apps.apple.com/de/app/eieruhr-pro-sorglos/id6670164294",
   "eieruhr": "https://apps.apple.com/de/app/eieruhr-pro-sorglos/id6670164294",

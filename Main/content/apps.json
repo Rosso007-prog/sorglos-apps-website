@@ -259,32 +259,38 @@
       "slug": "BabySorglos",
       "category": "Familie",
       "audience": "Eltern & Baby",
-      "tagline": "Alles Wichtige rund ums Baby – sorglos im Blick.",
-      "description": "Begleiter für die ersten Monate mit Baby: Schlaf, Mahlzeiten, Windeln und Entwicklung auf einen Blick.",
+      "tagline": "Das sichere WLAN-Babyphone ohne Cloud.",
+      "description": "Verwandelt iPhone, iPad oder Mac in ein privates Babyphone mit Live-Bild, Ton, Bewegungs- und Geräuscherkennung sowie verständlicher Schlafanalyse – direkt im eigenen Heim-WLAN, ohne Cloud-Zwang.",
       "icon": "apps/BabySorglos/AppIcon150x150.png",
       "href": "apps/BabySorglos/index.html",
-      "appStoreUrl": "",
+      "appStoreUrl": "https://apps.apple.com/de/app/babysorglos/id6754441249",
       "badges": [
-        "Baby",
-        "Schlaf",
-        "Familie"
+        "WLAN-Babyphone",
+        "Live-Bild",
+        "Ohne Cloud"
       ],
       "features": [
         {
-          "titel": "Schlaf & Mahlzeiten",
-          "text": "Schlafzeiten und Mahlzeiten einfach erfassen und Muster erkennen."
+          "titel": "Live-Bild & Ton",
+          "text": "Seht und hört euer Baby in Echtzeit – direkt über euer Heim-WLAN."
         },
         {
-          "titel": "Entwicklung im Blick",
-          "text": "Meilensteine und Wachstum des Babys dokumentieren und feiern."
+          "titel": "Bewegungs- & Geräuscherkennung",
+          "text": "Legt einen Bildbereich fest und werdet bei Bewegungen oder auffälligen Geräuschen informiert."
         },
         {
-          "titel": "Erinnerungen & Notizen",
-          "text": "Wichtige Momente und Arzttermine festhalten – alles an einem Ort."
+          "titel": "Verständliche Schlafanalyse",
+          "text": "Ruhephasen, Unruhe-Momente und Verbindungsqualität übersichtlich für jede Nacht."
+        },
+        {
+          "titel": "Sicher ohne Cloud-Zwang",
+          "text": "Verbindung per PIN und QR-Code direkt im Heimnetz – ohne Pflichtkonto."
         }
       ],
       "featured": false,
-      "accent": "#ffb0d0",
+      "accent": "#7dafff",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/82/cd/14/82cd1401-3c7a-443e-7744-513d87c0cc05/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Baby Sorglos – das sichere WLAN-Babyphone für euer Zuhause.\n\nVerwandelt iPhone, iPad und Mac in ein modernes Babyphone mit Live-Bild, Ton, Bewegungs- und Geräuscherkennung sowie intelligenter Schlafanalyse – ganz ohne Cloud, Konto oder Internetverbindung.",
       "screenshots": [
         "1.png",
         "2.png",
@@ -524,7 +530,7 @@
       ],
       "featured": false,
       "accent": "#76c9ff",
-      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/c8/90/63c8905a-846a-6693-3f7a-51e693cf37ea/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/bb/22/1abb22ca-e803-79d8-7557-5bcc7ab448b1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "storeDescription": "Teste deine Internetgeschwindigkeit mit SpeedCheck Pro.\n\nErfahre in wenigen Sekunden, wie schnell deine Verbindung wirklich ist. SpeedCheck Pro misst Download, Upload, Ping und analysiert zusätzlich die Qualität deiner Verbindung für Streaming, Gaming und Videoanrufe.",
       "screenshots": [
         "1.png",
@@ -644,8 +650,8 @@
       ],
       "featured": false,
       "accent": "#ff9e6d",
-      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/fd/50/0efd50a2-2629-2f73-d4ba-a290c7bff033/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-      "storeDescription": "Perfekt grillen – ganz ohne Stress.\nOb Steak, Würstchen, Fisch oder Gemüse: Grilltimer Pro sorgt für punktgenaue Ergebnisse. Smarte Erinnerungen und adaptive Timer machen dein BBQ jedes Mal gelingsicher.",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/86/e6/9186e666-1a96-a294-a9ae-a6657dca21a9/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "Perfekt grillen – ganz ohne Stress.\n\nNie wieder zu früh oder zu spät grillen. My Grill Timer hilft dir dabei, Steak, Burger, Würstchen, Fisch und Gemüse perfekt zu timen – damit alles gleichzeitig servierbereit ist.",
       "screenshots": [
         "1.png",
         "2.png",
@@ -976,7 +982,7 @@
       "description": "Für Motorrad-, Moped- und Oldtimer-Enthusiasten, die einen visuell ansprechenden Begleiter für ihre Ausfahrten suchen.",
       "icon": "apps/RetroPulse/AppIcon150x150.png",
       "href": "apps/RetroPulse/index.html",
-      "appStoreUrl": "",
+      "appStoreUrl": "https://apps.apple.com/de/app/retropulse/id6774341541",
       "badges": [
         "Motorrad",
         "GPS",
@@ -1002,6 +1008,8 @@
       ],
       "featured": false,
       "accent": "rgba(255, 160, 80, 0.2)",
+      "storeIcon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c9/43/68/c94368da-79d1-612e-0c5b-46b740257428/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+      "storeDescription": "RetroPulse\n\nVerwandle dein Smartphone in ein klassisches Vintage-Cockpit.\n\nRetroPulse kombiniert modernes GPS-Tracking mit dem Charme historischer Tachometer. Die App zeigt Geschwindigkeit in Echtzeit an und schätzt die Motordrehzahl anhand von GPS-Daten, Vibrationen und Umgebungsgeräuschen.",
       "screenshots": [
         "1.png",
         "2.png",

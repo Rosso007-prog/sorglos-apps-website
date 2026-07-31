@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-// Fetches current icons, descriptions and screenshots from the iTunes Search API
+// Fetches current icons and descriptions from the iTunes Search API
 // and updates Main/content/apps.json in place.
+// (Screenshot URLs are no longer returned by Apple's public Lookup API for most
+// apps/regions, so that field is not synced here.)
 //
 // Usage:
 //   node Main/scripts/sync-appstore.js          → prüft ob 24h vergangen sind
@@ -121,15 +123,6 @@ async function sync() {
             const desc = shortenDescription(info.description);
             if (desc && app.storeDescription !== desc) {
                 app.storeDescription = desc;
-                changed = true;
-            }
-
-            // Screenshots
-            const shots = (info.screenshotUrls && info.screenshotUrls.length)
-                ? info.screenshotUrls
-                : (info.ipadScreenshotUrls || []);
-            if (JSON.stringify(shots) !== JSON.stringify(app.screenshotUrls || [])) {
-                app.screenshotUrls = shots;
                 changed = true;
             }
 

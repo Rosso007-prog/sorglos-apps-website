@@ -6,3 +6,6 @@
 
 # Kurz-URL für Pro-Doku
 /prodoku                         /apps/pro-doku/       301
+
+# Kurz-URL für BabySorglos
+/babysorglos                     /apps/baby-echo/      301
