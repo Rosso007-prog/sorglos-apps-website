@@ -314,4 +314,11 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://sorglos-apps.de/wissen-bewahren/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

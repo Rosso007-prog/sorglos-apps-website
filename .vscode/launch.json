@@ -2,18 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Website lokal testen",
-      "type": "chrome",
+      "name": "Website lokal testen – Edge",
+      "type": "pwa-msedge",
       "request": "launch",
-      "url": "http://localhost:8000",
+      "url": "http://127.0.0.1:8000",
       "webRoot": "${workspaceFolder}",
       "preLaunchTask": "Server starten & Cache leeren",
-      "userDataDir": "${workspaceFolder}/.vscode/.chrome-debug-profile",
-      "runtimeArgs": [
-        "--disable-cache",
-        "--disable-application-cache",
-        "--disable-offline-load-stale-cache"
-      ]
+      "runtimeExecutable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "userDataDir": "${workspaceFolder}/.vscode/.edge-debug-profile",
+      "runtimeArgs": ["--disable-cache", "--disable-application-cache", "--disable-offline-load-stale-cache"]
+    },
+    {
+      "name": "Website lokal testen – Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://127.0.0.1:8000",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Server starten & Cache leeren",
+      "firefoxExecutable": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "profile": "${workspaceFolder}/.vscode/.firefox-debug-profile",
+      "clearConsoleOnReload": true,
+      "reAttach": true
     }
   ]
 }

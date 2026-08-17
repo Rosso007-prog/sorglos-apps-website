@@ -14,4 +14,4 @@ class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
         print(fmt % args)
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-http.server.test(HandlerClass=NoCacheHandler, port=8000, bind="")
+http.server.test(HandlerClass=NoCacheHandler, port=8000, bind="127.0.0.1")
